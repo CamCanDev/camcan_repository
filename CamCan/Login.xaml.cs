@@ -64,5 +64,10 @@ namespace CamCan
             this.NavigationService.Navigate(new Uri("/Information.xaml", UriKind.Relative));
         }
 
+        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }
