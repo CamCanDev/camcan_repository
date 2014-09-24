@@ -86,6 +86,7 @@
     <Compile Include="Scenarios.xaml.cs">
       <DependentUpon>Scenarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -24,3 +24,22 @@ E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan
 E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.dll
 E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.pdb
 E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\XapCacheFile.xml
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\ApplicationIcon.png
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\Background.png
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.dll
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.pdb
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\App.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Feedback.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Help.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Information.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Login.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\QuestionText.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\QuestionVideo.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Result.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Scenarios.g.i.cs
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.g.resources
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.dll
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.pdb
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\AppManifest.xaml
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.xap
+E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\XapCacheFile.xml
