@@ -83,10 +83,10 @@
     <Compile Include="Result.xaml.cs">
       <DependentUpon>Result.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Scenario.cs" />
     <Compile Include="Scenarios.xaml.cs">
       <DependentUpon>Scenarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

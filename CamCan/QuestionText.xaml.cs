@@ -15,29 +15,10 @@ namespace CamCan
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        //variables to hold hardcoded data
-        public int id = 1;
-        String text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci ta";
-
-
-
-
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            Loaded += PhoneApplicationPage_Loaded;
-        }
-
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-            Scenario s = new Scenario();
-            s.sID = id;            
-            s.text = text;
-            PageTitle.Text = "Scenario " + s.sID;
-            ContentPanel.DataContext = s;
-            //
         }
     }
 }
