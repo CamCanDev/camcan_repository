@@ -141,6 +141,7 @@
     <Content Include="Images\back_screen.png" />
     <Content Include="Images\change_text.png" />
     <Content Include="Images\change_video.png" />
+    <Resource Include="Images\content_background.png" />
     <Content Include="Images\done.png" />
     <Content Include="Images\help.png" />
     <Content Include="Images\info.png" />

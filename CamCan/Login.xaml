@@ -20,15 +20,18 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"></StackPanel>
+        <!--TitlePanel contains the name of the application and page title
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>-->
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Margin="0,17,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
+        <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
             <TextBox Height="76" Margin="51,449,46,0" Name="txtUser" Text="Username" VerticalAlignment="Top" TextChanged="txtUser_TextChanged" TextAlignment="Center" Tap="txtUser_Tap" />
-            <TextBox Height="76" Margin="51,531,46,0" Name="txtPass" Text="Password" VerticalAlignment="Top" TextAlignment="Center" Tap="txtPass_Tap" />
+            <TextBox Height="76" Margin="51,531,46,0" Name="txtPass" Text="Password" VerticalAlignment="Top" TextChanged="txtPass_TextChanged" TextAlignment="Center" Tap="txtPass_Tap" />
             <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="75,633,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Button Content="Info" Height="72" HorizontalAlignment="Left" Margin="241,633,0,0" Name="btnInfo" VerticalAlignment="Top" Width="160" Click="btnInfo_Click" />
+            <Button Content="Help" Height="72" HorizontalAlignment="Left" Margin="241,633,0,0" Name="btnInfo" VerticalAlignment="Top" Width="160" Click="btnInfo_Click" />
             <Grid.Background>
                 <ImageBrush ImageSource="/Images/back_screen.png" />
             </Grid.Background>

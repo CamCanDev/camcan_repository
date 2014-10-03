@@ -14,32 +14,31 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid Background="#FFB21116" Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="127" />
-            <RowDefinition Height="641*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Background="#FFB21116" Grid.Row="1" Name="ContentPanel">
-            <TextBlock Height="40" HorizontalAlignment="Left" Margin="132,222,0,0" Name="textBlock1" Text="Scenario 1" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="30" />
-            <TextBlock Height="43" HorizontalAlignment="Left" Margin="132,278,0,0" Name="textBlock2" Text="Scenario 2" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="30" />
-            <TextBlock Height="43" HorizontalAlignment="Left" Margin="132,338,0,0" Name="textBlock3" Text="Scenario 3" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="30" />
-            <TextBlock Height="59" HorizontalAlignment="Left" Margin="132,400,0,0" Name="textBlock4" Text="Scenario 4" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="30" Width="166" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="311,291,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="37" Source="/Images/done.png" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="311,232,0,0" Name="image3" Source="/Images/wrong.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
-            <Button Background="Black" BorderBrush="Black" Content="Back" Height="72" HorizontalAlignment="Left" Margin="155,485,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <TextBlock Height="187" HorizontalAlignment="Left" Margin="10,11,0,0" Name="textBlock8" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit e" TextWrapping="Wrap" VerticalAlignment="Top" Width="464" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="311,400,0,0" Name="image4" Source="/Images/done.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="311,351,0,0" Name="image1" Source="/Images/wrong.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+            <TextBlock x:Name="PageTitle" Text="Results" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
+            </Grid.Background>
+            <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" BorderBrush="White" />
         </Grid>
-        <TextBlock FontFamily="Comic Sans MS" FontSize="72" Foreground="White" HorizontalAlignment="Left" Margin="84,0,0,593" Name="textBlock9" Text="Results" Width="310" Grid.RowSpan="2" />
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFC2000D">
-            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/change_video.png" Text="Text"/>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>

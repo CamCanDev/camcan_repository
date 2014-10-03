@@ -20,5 +20,10 @@ namespace CamCan
         {
             InitializeComponent();
         }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -69,5 +69,10 @@ namespace CamCan
 
         }
 
+        private void txtPass_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }
