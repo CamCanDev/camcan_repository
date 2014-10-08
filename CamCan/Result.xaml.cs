@@ -20,9 +20,9 @@ namespace CamCan
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
     }
 }

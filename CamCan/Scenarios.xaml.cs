@@ -27,7 +27,7 @@ namespace CamCan
 
         private void btnScn2_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionVideo.xaml", UriKind.Relative));
         }
 
         private void btnScn3_Click(object sender, RoutedEventArgs e)

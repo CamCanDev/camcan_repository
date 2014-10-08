@@ -81,3 +81,23 @@ C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
 C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
 C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
 C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.dll
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
+E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml

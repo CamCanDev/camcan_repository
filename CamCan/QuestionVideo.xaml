@@ -30,16 +30,17 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
+            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="162,229,0,0" Name="button1" VerticalAlignment="Top" Width="160" Foreground="#FFDB0B0B" />
         </Grid>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
-            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Forward"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Back"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/change_text.png" Text="ApplicationBarIconButton_Text"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="ApplicationBarIconButton_Help"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/change_text.png" Text="Text" Click="ApplicationBarIconButton_Text" />
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>

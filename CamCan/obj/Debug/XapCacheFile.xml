@@ -1,21 +1,21 @@
-﻿<xapCache source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/10/2014 12:18:34 PM">
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Background.png" archivePath="Background.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll" archivePath="CamCan.dll" lastWriteTime="3/10/2014 12:18:34 PM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\back.png" archivePath="Images\back.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\back_screen.png" archivePath="Images\back_screen.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\change_text.png" archivePath="Images\change_text.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\change_video.png" archivePath="Images\change_video.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\done.png" archivePath="Images\done.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\help.png" archivePath="Images\help.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\info.png" archivePath="Images\info.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\login.png" archivePath="Images\login.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\next.png" archivePath="Images\next.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\video-placeholder-large.jpg" archivePath="Images\video-placeholder-large.jpg" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Images\wrong.png" archivePath="Images\wrong.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/10/2014 12:05:10 PM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/10/2014 11:38:53 AM" />
-  <file source="C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="3/10/2014 11:38:53 AM" />
+﻿<xapCache source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="8/10/2014 12:22:46 PM">
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/10/2014 11:42:49 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Background.png" archivePath="Background.png" lastWriteTime="8/10/2014 11:42:48 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="8/10/2014 11:42:48 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll" archivePath="CamCan.dll" lastWriteTime="8/10/2014 12:22:46 PM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\back.png" archivePath="Images\back.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\back_screen.png" archivePath="Images\back_screen.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\change_text.png" archivePath="Images\change_text.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\change_video.png" archivePath="Images\change_video.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\done.png" archivePath="Images\done.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\help.png" archivePath="Images\help.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\info.png" archivePath="Images\info.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\login.png" archivePath="Images\login.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\next.png" archivePath="Images\next.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\video-placeholder-large.jpg" archivePath="Images\video-placeholder-large.jpg" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Images\wrong.png" archivePath="Images\wrong.png" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="8/10/2014 11:42:52 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/10/2014 12:01:01 PM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="8/10/2014 11:42:48 AM" />
+  <file source="E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="8/10/2014 11:42:48 AM" />
 </xapCache>

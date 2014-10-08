@@ -30,7 +30,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
-            <Button Content="Back" Height="104" Margin="130,0,139,6" Name="btnBack" VerticalAlignment="Bottom" Background="#FFC3000D" BorderBrush="Gray" />
+            <Button Content="Back" Height="104" Margin="130,0,139,6" Name="btnBack" VerticalAlignment="Bottom" Background="#FFC3000D" BorderBrush="Gray" Click="btnBack_Click" />
             <TextBlock Height="453" HorizontalAlignment="Left" Margin="6,79,0,0" Name="textBlock" Text="TextBlock" VerticalAlignment="Top" Width="468" Foreground="Black" />
         </Grid>
     </Grid>
