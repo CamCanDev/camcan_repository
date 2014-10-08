@@ -30,7 +30,17 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
-            <Button Content="Finish" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" />
+            <Button Content="Finish" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" />
+            <TextBlock Height="53" HorizontalAlignment="Left" Margin="47,125,0,0" Name="textBlock1" Text="Q: 1" VerticalAlignment="Top" Width="382" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,293,0,0" Name="textBlock2" Text="Q: 3" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,234,0,0" Name="textBlock3" Text="A: 2" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,206,0,0" Name="textBlock4" Text="Q: 2" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,160,0,0" Name="textBlock5" Text="A: 1" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,325,0,0" Name="textBlock6" Text="A: 3" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,384,0,0" Name="textBlock7" Text="Q: 4" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,418,0,0" Name="textBlock8" Text="A: 4" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,467,0,0" Name="textBlock9" Text="Q: 5" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,498,0,0" Name="textBlock10" Text="A: 5" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
         </Grid>
     </Grid>
 
