@@ -30,6 +30,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
+            <TextBlock Height="390" HorizontalAlignment="Left" Margin="28,75,0,0" Name="textBlock1" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nulla quis dictum laoreet. Nam commodo sem in turpis fringilla consequat. Suspendisse quis ultricies dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In euismod, nisi ac viverra consequat, nisl nunc venenatis sapien, ac convallis massa mi euismod ex. Nulla a mattis enim. Donec eleifend odio ligula, eget cursus lectus dictum a. Fusce rutrum arcu eget aliquam tristique." VerticalAlignment="Top" Width="431" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
         </Grid>
     </Grid>
  

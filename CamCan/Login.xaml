@@ -30,14 +30,13 @@
         <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
             <TextBox Height="76" Margin="51,449,46,0" Name="txtUser" Text="Username" VerticalAlignment="Top" TextChanged="txtUser_TextChanged" TextAlignment="Center" Tap="txtUser_Tap" />
             <TextBox Height="76" Margin="51,531,46,0" Name="txtPass" Text="Password" VerticalAlignment="Top" TextChanged="txtPass_TextChanged" TextAlignment="Center" Tap="txtPass_Tap" />
-            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="75,633,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Button Content="Help" Height="72" HorizontalAlignment="Left" Margin="241,633,0,0" Name="btnInfo" VerticalAlignment="Top" Width="160" Click="btnInfo_Click" />
+            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="154,595,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Grid.Background>
                 <ImageBrush ImageSource="/Images/back_screen.png" />
             </Grid.Background>
         </Grid>
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar
      <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFC2000D">
