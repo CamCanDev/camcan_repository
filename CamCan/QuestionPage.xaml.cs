@@ -13,16 +13,21 @@ using Microsoft.Phone.Controls;
 
 namespace CamCan
 {
-    public partial class Help : PhoneApplicationPage
+    public partial class QuestionPage : PhoneApplicationPage
     {
-        public Help()
+
+        public Question testQuestion;
+
+        public QuestionPage()
         {
             InitializeComponent();
+            testQuestion = new Question();
+
+            // test data
+            testQuestion.testQuestion();
+
+            ContentPanel.DataContext = testQuestion;
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.GoBack();
-        }
     }
 }
