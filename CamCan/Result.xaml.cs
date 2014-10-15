@@ -24,5 +24,10 @@ namespace CamCan
         {
             this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
+
+        private void btnGo_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/Feedback.xaml", UriKind.Relative));
+        }
     }
 }
