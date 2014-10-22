@@ -10,38 +10,38 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="Transparent">
             <TextBlock x:Name="PageTitle" Text="Questions" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Background="Transparent">
             <TextBlock FontFamily="Comic Sans MS" FontSize="25.333" Foreground="Black" Height="106" HorizontalAlignment="Left" Margin="47,81,0,0" Name="textBlock2" Text="{Binding questionText}" VerticalAlignment="Top" Width="382" TextWrapping="Wrap" />
             <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[0]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,162,0,0" Name="btnScn1" VerticalAlignment="Top" Width="399" />
             <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[3]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,444,0,0" Name="button2" VerticalAlignment="Top" Width="399" />
             <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[1]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,349,0,0" Name="button3" VerticalAlignment="Top" Width="399" />
             <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[2]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,253,0,0" Name="button4" VerticalAlignment="Top" Width="399" />
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CamCan;component/Images/back_screen.png" />
+        </Grid.Background>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
 
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
                 <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
                 <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
                 <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>

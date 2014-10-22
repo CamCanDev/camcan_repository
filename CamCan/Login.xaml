@@ -32,7 +32,7 @@
             <TextBox Height="76" Margin="51,531,46,0" Name="txtPass" Text="Password" VerticalAlignment="Top" TextChanged="txtPass_TextChanged" TextAlignment="Center" Tap="txtPass_Tap" />
             <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="154,595,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Grid.Background>
-                <ImageBrush ImageSource="/Images/back_screen.png" />
+                <ImageBrush ImageSource="Images/background.png" />
             </Grid.Background>
         </Grid>
     </Grid>

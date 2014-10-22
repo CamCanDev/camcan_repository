@@ -14,26 +14,26 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="Transparent">
             <TextBlock x:Name="PageTitle" Text="Help" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Background="Transparent">
             <TextBlock Height="453" HorizontalAlignment="Left" Margin="6,79,0,0" Name="textBlock" Text="    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." VerticalAlignment="Top" Width="468" Foreground="Black" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="25" />
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
 
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CamCan;component/Images/back_screen.png" />
+        </Grid.Background>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->

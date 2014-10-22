@@ -146,7 +146,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\back.png" />
-    <Content Include="Images\back_screen.png" />
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\back_screen.png" />
     <Content Include="Images\change_text.png" />
     <Content Include="Images\change_video.png" />
     <Resource Include="Images\content_background.png" />

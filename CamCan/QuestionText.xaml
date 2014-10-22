@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -14,29 +14,30 @@
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="Transparent">
             <TextBlock x:Name="PageTitle" Text="Questions" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
             <TextBlock Height="390" HorizontalAlignment="Left" Margin="28,75,0,0" Name="textBlock1" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nulla quis dictum laoreet. Nam commodo sem in turpis fringilla consequat. Suspendisse quis ultricies dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In euismod, nisi ac viverra consequat, nisl nunc venenatis sapien, ac convallis massa mi euismod ex. Nulla a mattis enim. Donec eleifend odio ligula, eget cursus lectus dictum a. Fusce rutrum arcu eget aliquam tristique." VerticalAlignment="Top" Width="431" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
+            
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/back_screen.png" />
+        </Grid.Background>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
             <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
             <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
             <shell:ApplicationBarIconButton IconUri="/Images/change_video.png" Text="Text" Click="ApplicationBarIconButton_Video"/>
