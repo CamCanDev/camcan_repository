@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage 
+<phone:PhoneApplicationPage 
     x:Class="CamCan.Feedback"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -14,27 +14,34 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid Background="#FFB21116" Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="127" />
-            <RowDefinition Height="641*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Background="#FFB21116" Grid.Row="1" Name="ContentPanel">
-            <Image Height="30" HorizontalAlignment="Left" Margin="409,405,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="37" Source="/Images/done.png" />
-            <Button Background="Black" BorderBrush="Black" Content="FINISH" Height="72" HorizontalAlignment="Left" Margin="155,542,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="409,282,0,0" Name="image1" Source="/Images/wrong.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="409,166,0,0" Name="image4" Source="/Images/done.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="27,46,0,0" Name="textBlock1" Text="Question 1" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="27,0,0,445" Name="textBlock2" Text="Question 2" VerticalAlignment="Bottom" Foreground="Black" FontWeight="Bold" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="27,282,0,0" Name="textBlock3" Text="Question 3" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="24,405,0,0" Name="textBlock4" Text="Question 4" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="90" Foreground="White" HorizontalAlignment="Left" Margin="27,-135,0,601" Name="textBlock9" Text="Feedback" Width="419" />
-            <Image Height="30" HorizontalAlignment="Left" Margin="409,46,0,0" Name="image3" Source="/Images/wrong.png" Stretch="Fill" VerticalAlignment="Top" Width="37" />
-            <TextBlock FlowDirection="LeftToRight" Foreground="Black" Height="81" HorizontalAlignment="Left" Margin="27,196,0,0" Name="textBlock6" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa tellus, bibendum et sem." TextWrapping="Wrap" VerticalAlignment="Top" Width="419" />
-            <TextBlock FlowDirection="LeftToRight" Foreground="Black" Height="81" HorizontalAlignment="Left" Margin="27,318,0,0" Name="textBlock7" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa tellus, bibendum et sem." TextWrapping="Wrap" VerticalAlignment="Top" Width="419" />
-            <TextBlock FlowDirection="LeftToRight" Foreground="Black" Height="81" HorizontalAlignment="Left" Margin="27,446,0,0" Name="textBlock8" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa tellus, bibendum et sem." TextWrapping="Wrap" VerticalAlignment="Top" Width="419" />
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+            <TextBlock x:Name="PageTitle" Text="Feedback" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
+            </Grid.Background>
+            <Button Content="Finish" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" />
+            <TextBlock Height="53" HorizontalAlignment="Left" Margin="47,125,0,0" Name="textBlock1" Text="{Binding}" VerticalAlignment="Top" Width="382" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,293,0,0" Name="textBlock2" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,234,0,0" Name="textBlock3" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,206,0,0" Name="textBlock4" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,160,0,0" Name="textBlock5" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,325,0,0" Name="textBlock6" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,384,0,0" Name="textBlock7" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,418,0,0" Name="textBlock8" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,467,0,0" Name="textBlock9" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
+            <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="47,498,0,0" Name="textBlock10" Text="{Binding}" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" />
         </Grid>
-        <TextBlock Foreground="Black" Height="81" HorizontalAlignment="Left" Margin="27,82,0,0" Name="textBlock5" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa tellus, bibendum et sem." VerticalAlignment="Top" Grid.Row="1" FlowDirection="LeftToRight" TextWrapping="Wrap" Width="419" />
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
