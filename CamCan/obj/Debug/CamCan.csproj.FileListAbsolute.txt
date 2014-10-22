@@ -121,3 +121,4 @@ H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCa
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
+E:\Github\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
