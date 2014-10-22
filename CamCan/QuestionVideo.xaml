@@ -28,7 +28,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <Grid.Background>
-                <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
+                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
             <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="162,229,0,0" Name="button1" VerticalAlignment="Top" Width="160" Foreground="#FFDB0B0B" />
         </Grid>

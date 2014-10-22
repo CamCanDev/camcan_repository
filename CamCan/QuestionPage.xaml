@@ -28,7 +28,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <Grid.Background>
-                <ImageBrush ImageSource="/Images/content_background.png" Stretch="UniformToFill" />
+                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
             <TextBlock FontFamily="Comic Sans MS" FontSize="25.333" Foreground="Black" Height="106" HorizontalAlignment="Left" Margin="47,81,0,0" Name="textBlock2" Text="{Binding questionText}" VerticalAlignment="Top" Width="382" TextWrapping="Wrap" />
             <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[0]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,162,0,0" Name="btnScn1" VerticalAlignment="Top" Width="399" />

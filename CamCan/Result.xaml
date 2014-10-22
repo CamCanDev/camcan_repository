@@ -29,7 +29,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <Grid.Background>
 
-                <ImageBrush ImageSource="/Images/content_background.png" Stretch="UniformToFill" />
+                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
             </Grid.Background>
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="70" HorizontalAlignment="Left" Margin="94,137,0,0" Name="textBlock" Text="    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." TextWrapping="Wrap" VerticalAlignment="Top" Width="302" />
