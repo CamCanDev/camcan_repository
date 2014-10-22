@@ -14,11 +14,13 @@ using Microsoft.Phone.Controls;
 namespace CamCan
 {
     public partial class MainPage : PhoneApplicationPage
-    {
+    {   
+        string myParameterValue;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+           
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
@@ -41,5 +43,13 @@ namespace CamCan
         {
             this.NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+                 myParameterValue = NavigationContext.QueryString["id"];
+
+                 base.OnNavigatedTo(e);
+                 tbScenario.Text = "Scenario" + myParameterValue;
+         }
     }
 }

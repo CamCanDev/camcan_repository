@@ -36,5 +36,6 @@ namespace CamCan
             this.NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
 
+        
     }
 }

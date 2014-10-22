@@ -14,19 +14,22 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="Transparent">
-            <TextBlock x:Name="PageTitle" Text="Scenarios" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+            <TextBlock x:Name="tbScenarios" Text="Scenarios" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Background="Transparent">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
+            </Grid.Background>
             <Button Content="Scenario 1" Height="100" HorizontalAlignment="Left" Margin="0,91,0,0" Name="btnScn1" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#C3000D" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn1_Click" />
             <Button Content="Scenario 2" Height="100" HorizontalAlignment="Right" Margin="0,91,6,0" Name="btnScn2" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#C3000D" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn2_Click" />
             <Button Content="Scenario 3" Height="100" HorizontalAlignment="Left" Margin="0,197,0,0" Name="btnScn3" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#C3000D" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn3_Click" />
@@ -38,9 +41,6 @@
             <Button Content="Scenario 9" Height="100" HorizontalAlignment="Left" Margin="0,514,0,0" Name="btnScn9" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#C3000D" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn9_Click" />
             <Button Content="Scenario 10" Height="100" HorizontalAlignment="Left" Margin="238,514,0,0" Name="btnScn10" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#C3000D" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn10_Click" />
         </Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/CamCan;component/Images/back_screen.png" />
-        </Grid.Background>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->

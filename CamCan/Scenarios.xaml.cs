@@ -22,52 +22,53 @@ namespace CamCan
 
         private void btnScn1_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=1", UriKind.Relative));
+            
         }
 
         private void btnScn2_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionVideo.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=2", UriKind.Relative));
         }
 
         private void btnScn3_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=3", UriKind.Relative));
         }
 
         private void btnScn4_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=4", UriKind.Relative));
         }
 
         private void btnScn5_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=5", UriKind.Relative));
         }
 
         private void btnScn6_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=6", UriKind.Relative));
         }
 
         private void btnScn7_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=7", UriKind.Relative));
         }
 
         private void btnScn8_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=8", UriKind.Relative));
         }
 
         private void btnScn9_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=9", UriKind.Relative));
         }
 
         private void btnScn10_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?id=10", UriKind.Relative));
         }
 
 
