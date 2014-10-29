@@ -20,17 +20,34 @@ namespace CamCan.CamCanService {
     [System.Runtime.Serialization.DataContractAttribute(Name="Scenario", Namespace="http://schemas.datacontract.org/2004/07/CamCan_Service")]
     public partial class Scenario : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private System.Collections.ObjectModel.ObservableCollection<CamCan.CamCanService.Question> _questionArrayField;
+        
         private int _scenarioIDField;
         
         private string _scenarioInformationField;
         
         private string _videoLinkField;
         
+        private System.Collections.ObjectModel.ObservableCollection<CamCan.CamCanService.Question> questionArrayField;
+        
         private int scenarioIDField;
         
         private string scenarioInformationField;
         
         private string videoLinkField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<CamCan.CamCanService.Question> _questionArray {
+            get {
+                return this._questionArrayField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._questionArrayField, value) != true)) {
+                    this._questionArrayField = value;
+                    this.RaisePropertyChanged("_questionArray");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int _scenarioID {
@@ -72,6 +89,19 @@ namespace CamCan.CamCanService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.ObjectModel.ObservableCollection<CamCan.CamCanService.Question> questionArray {
+            get {
+                return this.questionArrayField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.questionArrayField, value) != true)) {
+                    this.questionArrayField = value;
+                    this.RaisePropertyChanged("questionArray");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int scenarioID {
             get {
                 return this.scenarioIDField;
@@ -106,6 +136,231 @@ namespace CamCan.CamCanService {
                 if ((object.ReferenceEquals(this.videoLinkField, value) != true)) {
                     this.videoLinkField = value;
                     this.RaisePropertyChanged("videoLink");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Question", Namespace="http://schemas.datacontract.org/2004/07/CamCan_Service")]
+    public partial class Question : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string _ansAField;
+        
+        private string _ansBField;
+        
+        private string _ansCField;
+        
+        private string _ansDField;
+        
+        private string _correctAnsField;
+        
+        private int _questionIDField;
+        
+        private string _questionTextField;
+        
+        private string ansAField;
+        
+        private string ansBField;
+        
+        private string ansCField;
+        
+        private string ansDField;
+        
+        private string correctAnsField;
+        
+        private int questionIDField;
+        
+        private string questionTextField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _ansA {
+            get {
+                return this._ansAField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._ansAField, value) != true)) {
+                    this._ansAField = value;
+                    this.RaisePropertyChanged("_ansA");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _ansB {
+            get {
+                return this._ansBField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._ansBField, value) != true)) {
+                    this._ansBField = value;
+                    this.RaisePropertyChanged("_ansB");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _ansC {
+            get {
+                return this._ansCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._ansCField, value) != true)) {
+                    this._ansCField = value;
+                    this.RaisePropertyChanged("_ansC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _ansD {
+            get {
+                return this._ansDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._ansDField, value) != true)) {
+                    this._ansDField = value;
+                    this.RaisePropertyChanged("_ansD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _correctAns {
+            get {
+                return this._correctAnsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._correctAnsField, value) != true)) {
+                    this._correctAnsField = value;
+                    this.RaisePropertyChanged("_correctAns");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int _questionID {
+            get {
+                return this._questionIDField;
+            }
+            set {
+                if ((this._questionIDField.Equals(value) != true)) {
+                    this._questionIDField = value;
+                    this.RaisePropertyChanged("_questionID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string _questionText {
+            get {
+                return this._questionTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this._questionTextField, value) != true)) {
+                    this._questionTextField = value;
+                    this.RaisePropertyChanged("_questionText");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ansA {
+            get {
+                return this.ansAField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ansAField, value) != true)) {
+                    this.ansAField = value;
+                    this.RaisePropertyChanged("ansA");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ansB {
+            get {
+                return this.ansBField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ansBField, value) != true)) {
+                    this.ansBField = value;
+                    this.RaisePropertyChanged("ansB");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ansC {
+            get {
+                return this.ansCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ansCField, value) != true)) {
+                    this.ansCField = value;
+                    this.RaisePropertyChanged("ansC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ansD {
+            get {
+                return this.ansDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ansDField, value) != true)) {
+                    this.ansDField = value;
+                    this.RaisePropertyChanged("ansD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string correctAns {
+            get {
+                return this.correctAnsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.correctAnsField, value) != true)) {
+                    this.correctAnsField = value;
+                    this.RaisePropertyChanged("correctAns");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int questionID {
+            get {
+                return this.questionIDField;
+            }
+            set {
+                if ((this.questionIDField.Equals(value) != true)) {
+                    this.questionIDField = value;
+                    this.RaisePropertyChanged("questionID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string questionText {
+            get {
+                return this.questionTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.questionTextField, value) != true)) {
+                    this.questionTextField = value;
+                    this.RaisePropertyChanged("questionText");
                 }
             }
         }
