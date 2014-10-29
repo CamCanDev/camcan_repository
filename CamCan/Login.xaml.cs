@@ -30,13 +30,13 @@ namespace CamCan
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            user.setUsername = txtUser.Text;
+            user.setUsername(txtUser.Text);
             password = txtPass.Text;
 
             //WebService connection
             Service1Client camcanService = new Service1Client();
-            camcanService.returnUserProfile += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
-            camcanService.returnUserProfileAsync(user.getUsername, password);
+            camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
+            camcanService.returnUserAsync(user.getUsername(), password);
 
         }
 
@@ -44,9 +44,10 @@ namespace CamCan
         void camcanService_returnUserProfileCompleted(object sender, returnUserCompletedEventArgs e)
         {
             //adds the information returned in the User class
-            user = e.Result;
+            user.setUsername(e.Result.name);
+            user.setCompleted(e.Result.completed);
 
-            if (user.getUsername.Equals("Empty"))
+            if (user.getUsername().Equals("Empty"))
             {
 
                 MessageBox.Show("Invalid Entry! ");
