@@ -183,6 +183,36 @@ namespace CamCan_Service
             }
         }
 
+        [WebMethod]
+        public Results showResults(int scenarioID, int employeeID)
+        {
+            //Creating the connection string
+            String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+            //Accessing the database via the connection string
+            using (MySqlConnection cnn = new MySqlConnection(conString))
+            {
+                cnn.Open();
+                String sql = String.Format("SELECT scenarioID, questionID, answer, correct FROM results WHERE employeeID = {0} AND ScenarioID = {1}", scenarioID, employeeID);
+                Results result = new Results();
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                if (ds.Tables.Count == 0)
+                    {
+                       return result;
+                    }
+                else
+                {
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        result.setAnswer(dr.)
+                    }
+                }
+            }
+            
+        }
+
 
     }
 }
