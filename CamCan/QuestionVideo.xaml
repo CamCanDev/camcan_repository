@@ -19,23 +19,22 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2" Height="690" VerticalAlignment="Bottom">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
+            </Grid.Background>
+            <Button Content="Play" Height="111" HorizontalAlignment="Left" Margin="170,476,0,0" Name="btPlay" VerticalAlignment="Top" Width="189" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" />
+            <MediaElement Height="306" HorizontalAlignment="Left" Margin="11,121,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="463" Source="{Binding videoLink}" />
+        </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <Grid>
+            <Grid Background="#B20000">
                 <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,6,150,-6" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="106" />
                 <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,6,38,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
             </Grid>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="/CamCan;component/Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
-            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="165,405,0,0" Name="button1" VerticalAlignment="Top" Width="160" Foreground="#FFDB0B0B" />
-            <MediaElement Height="306" HorizontalAlignment="Left" Margin="11,121,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="463" Source="{Binding videoLink}" />
-        </Grid>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
