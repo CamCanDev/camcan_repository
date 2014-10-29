@@ -29,7 +29,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
             <Grid.Background>
-                <ImageBrush ImageSource="/CamCan;component/Images/loginBackground.fw2.png" />
+                <ImageBrush ImageSource="Images/loginBackground.fw2.png" />
             </Grid.Background>
             <TextBox Height="76" Margin="51,431,46,0" Name="txtUser" Text="{Binding Username}" VerticalAlignment="Top" TextAlignment="Center"/>
             <TextBox Height="76" Margin="51,527,46,0" Name="txtPass" Text="{Binding Password}" VerticalAlignment="Top" TextAlignment="Center"/>
