@@ -38,10 +38,10 @@
             
             
             <Grid>
-                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,287,142,0" Name="textBlock1" Text="{Binding answer[0]}" VerticalAlignment="Top" Width="209" />
-                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,216,142,0" Name="textBlock2" Text="{Binding answer[1]}" VerticalAlignment="Top" Width="209" />
-                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,434,142,0" Name="textBlock3" Text="{Binding answer[2]}" VerticalAlignment="Top" Width="209" />
-                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,356,142,0" Name="textBlock4" Text="{Binding answer[3]}" VerticalAlignment="Top" Width="209" />
+                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,216,142,0" Name="textBlock1" Text="0" VerticalAlignment="Top" Width="209" Foreground="#FF170D0D" DataContext="{Binding answer[0]}" />
+                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,287,142,0" Name="textBlock2" Text="1" VerticalAlignment="Top" Width="209" Foreground="#FF170D0D" DataContext="{Binding answer[1]}" />
+                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,356,142,0" Name="textBlock3" Text="2" VerticalAlignment="Top" Width="209" Foreground="#FF170D0D" DataContext="{Binding answer[2]}"/>
+                <TextBlock Height="41" HorizontalAlignment="Right" Margin="0,434,142,0" Name="textBlock4" Text="3" VerticalAlignment="Top" Width="209" Foreground="#FF170D0D" DataContext="{Binding answer[3]}"/>
                 <RadioButton Content="{Binding answer[0]}" Height="72" HorizontalAlignment="Left" Margin="47,216,0,0" Name="radioButton1" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
                 <RadioButton Content="{Binding answer[1]}" Height="72" HorizontalAlignment="Left" Margin="47,287,0,0" Name="radioButton2" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
                 <RadioButton Content="{Binding answer[2]}" Height="72" HorizontalAlignment="Left" Margin="47,356,0,0" Name="radioButton3" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
