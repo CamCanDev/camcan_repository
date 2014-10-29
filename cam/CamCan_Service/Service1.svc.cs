@@ -27,7 +27,7 @@ namespace CamCan_Service
             {
                 cnn.Open();
 
-                String sql = String.Format("SELECT name,scenario_completed,password FROM employees WHERE name = {0} and password = {1}",user,pass);
+                String sql = String.Format("SELECT name,scenario_completed,password FROM employees WHERE name = \"{0}\" and password = \"{1}\"", user, pass);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "users");
@@ -62,6 +62,7 @@ namespace CamCan_Service
         }
 
 
+        //Returns Scenario
         [WebMethod]
         public Scenario returnScenario(Int32 id)
         {
@@ -72,24 +73,59 @@ namespace CamCan_Service
             {
                 cnn.Open();
 
+                //Get Scenario Information
                 String sql = String.Format("SELECT * FROM scenarios WHERE scenarioID ={0}", id);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "scenarios");
+
+                //Get question Information
+                String sqlQ = String.Format("SELECT question, ansA, ansB, ansC, ansD, correctAns FROM questions WHERE scenarioID ={0}", id);
+                MySqlDataAdapter daQ = new MySqlDataAdapter(sql, cnn);
+                DataSet dsQ = new DataSet();
+                daQ.Fill(dsQ, "scenarios");
+
+                //Objects
                 Scenario s = new Scenario();
+                Question[] questArray = new Question[4];
+                int i = 0;
+
                 try
                 {
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
                         s.scenarioID = Convert.ToInt32(id);
                         s.videoLink = Convert.ToString(dr["videoLink"]);
-                        s.scenarioInformation = Convert.ToString(dr["scenarioInformation"]); 
+                        s.scenarioInformation = Convert.ToString(dr["scenarioInformation"]);
                     }
+
+
+                    foreach (DataRow dr in dsQ.Tables[0].Rows)
+                    {
+                        //
+                        if (i >= 4)
+                            break;
+
+                        //Load data from data table
+                        questArray[i].questionText = Convert.ToString(dr["question"]);
+                        questArray[i].ansA = Convert.ToString(dr["ansA"]);
+                        questArray[i].ansB = Convert.ToString(dr["ansB"]);
+                        questArray[i].ansC = Convert.ToString(dr["ansC"]);
+                        questArray[i].ansD = Convert.ToString(dr["ansD"]);
+                        questArray[i].correctAns = Convert.ToString(dr["correctAns"]);
+
+                        //Increment i
+                        i++;
+                    }
+
+                    //add questions to scenario
+                    s.questionArray = questArray;
                 }
+
+
                 catch (Exception ex)
                 {
                     s.scenarioInformation = ex.ToString();
-                   
                 }
 
                 return s;
@@ -97,8 +133,6 @@ namespace CamCan_Service
         }
         
         //gets user and password and returns the scenario completed
-        // Note - is this nessesary? 
-
         [WebMethod]
         public Int32 returnComleted(String user, String pass)
         {
