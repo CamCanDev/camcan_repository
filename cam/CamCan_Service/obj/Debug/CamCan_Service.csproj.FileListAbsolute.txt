@@ -1,0 +1,18 @@
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
