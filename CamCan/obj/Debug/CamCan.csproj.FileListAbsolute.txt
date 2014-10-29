@@ -121,3 +121,35 @@ H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCa
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
 H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.dll
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\ResolveAssemblyReference.cache
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
+\\Vboxsvr\d_drive\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
+G:\GitHub\camcan_repository\CamCan\obj\Debug\ResolveAssemblyReference.cache
+G:\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
+G:\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
+G:\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
+G:\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb

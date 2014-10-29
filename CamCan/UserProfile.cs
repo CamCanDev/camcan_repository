@@ -14,14 +14,7 @@ namespace CamCan
     public class UserProfile
     {
         private String username;
-        private String password;
-        private Scenarios[] scenarioList;
         private int completed;
-
-        public String setPassword
-        { 
-            set { password = value;}
-        }
 
          public String setUsername 
          {

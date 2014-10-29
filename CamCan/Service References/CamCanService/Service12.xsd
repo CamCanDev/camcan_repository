@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CamCan_Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CamCan_Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Scenario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_scenarioID" type="xs:int" />
+      <xs:element minOccurs="0" name="_scenarioInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_videoLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="scenarioID" type="xs:int" />
+      <xs:element minOccurs="0" name="scenarioInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="videoLink" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Scenario" nillable="true" type="tns:Scenario" />
+  <xs:complexType name="UserProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_completed" type="xs:int" />
+      <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="completed" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+</xs:schema>

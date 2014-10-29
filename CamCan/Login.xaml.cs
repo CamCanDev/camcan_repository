@@ -10,13 +10,15 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using CamCan.CamCanService;
+using Microsoft.Phone.Shell;
 
 namespace CamCan
 {
     public partial class Login : PhoneApplicationPage
     {
-        public String user = "1";
-        public String pass = "1";
+        UserProfile user = new UserProfile();
+        String password;
 
 
         public Login()
@@ -26,52 +28,42 @@ namespace CamCan
 
 
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            // if user name and password correct then enter the application
-            if ((txtUser.Text == user) && (txtPass.Text == pass))
+            user.setUsername = txtUser.Text;
+            password = txtPass.Text;
+
+            //WebService connection
+            Service1Client camcanService = new Service1Client();
+            camcanService.returnUserProfile += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
+            camcanService.returnUserProfileAsync(user.getUsername, password);
+
+        }
+
+        //this is the event handler which is called when the event is triggered
+        void camcanService_returnUserProfileCompleted(object sender, returnUserCompletedEventArgs e)
+        {
+            //adds the information returned in the User class
+            user = e.Result;
+
+            if (user.getUsername.Equals("Empty"))
             {
-                txtUser.Text = "";
-                txtPass.Text = "";
-                this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
+
+                MessageBox.Show("Invalid Entry! ");
 
             }
             else
             {
-                MessageBox.Show("Invalid Entry! ");
+                this.NavigationService.Navigate(new Uri("/Scenarios.xaml?User=" + user, UriKind.Relative));
+
             }
+
         }
 
-        private void txtUser_Tap(object sender, GestureEventArgs e)
-        {
-            txtUser.Text = "";
-        }
-
-        private void txtPass_Tap(object sender, GestureEventArgs e)
-        {
-            txtPass.Text = "";
-        }
-
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            UserProfile user1= new UserProfile();
-            user1.setUsername = "1";
-            user1.setPassword = "1";
-        }
 
         private void btnInfo_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/Information.xaml", UriKind.Relative));
-        }
-
-        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtPass_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
     }
