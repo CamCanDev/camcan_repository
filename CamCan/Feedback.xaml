@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,14 +22,17 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <TextBlock x:Name="PageTitle" Text="Feedback" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+            <Grid Height="26">
+                <TextBlock Height="30" Name="tbScenario" Text="Scenario" Margin="0,0,357,0" />
+                <TextBlock Height="30" Name="tbScenarioID" Text="{Binding id}" Margin="81,0,357,0" />
+            </Grid>
+            <Grid>
+                <TextBlock x:Name="PageTitle" Text="Feedback" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+            </Grid>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Background="{x:Null}">
             <Button Content="Finish" Height="72" HorizontalAlignment="Left" Margin="153,0,0,49" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" />
             <TextBlock Height="54" HorizontalAlignment="Left" Margin="43,59,0,0" Name="textBlock0" Text="0" VerticalAlignment="Top" Width="382" Foreground="Black" FontFamily="Comic Sans MS" FontSize="25.333" DataContext="{Binding}" />
             <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="43,119,0,0" Name="textBlock1" Text="1" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" DataContext="{Binding}"/>
@@ -40,6 +43,9 @@
             <TextBlock Foreground="Black" Height="53" HorizontalAlignment="Left" Margin="43,413,0,0" Name="textBlock6" Text="6" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" DataContext="{Binding}"/>
             <TextBlock Foreground="Black" Height="52" HorizontalAlignment="Left" Margin="43,472,0,0" Name="textBlock7" Text="7" VerticalAlignment="Top" Width="382" FontFamily="Comic Sans MS" FontSize="25.333" DataContext="{Binding}"/>
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CamCan;component/Images/back_screen.png" />
+        </Grid.Background>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
