@@ -7,10 +7,10 @@ namespace CamCan_Service
 {
     public class Results
     {
-        private int scenarioID;
-        private int questionID;
-        private String answer;
-        private bool correct;
+        public int scenarioID;
+        public int questionID;
+        public String answer;
+        public bool correct;
 
         public int scenario { get; set; }
         public int question { get; set; }

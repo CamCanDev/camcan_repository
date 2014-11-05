@@ -8,6 +8,7 @@ using System.Text;
 using System.Web.Services;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace CamCan_Service
 {
@@ -22,12 +23,17 @@ namespace CamCan_Service
         public UserProfile returnUser(String user, String pass)
         {
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+            String mD5Password;
 
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
+
                 cnn.Open();
 
-                String sql = String.Format("SELECT name,scenario_completed,password FROM employees WHERE name = \"{0}\" and password = \"{1}\"", user, pass);
+                // Convert password to MD5
+                mD5Password = CalculateMD5Hash(pass);
+
+                String sql = String.Format("SELECT * FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, mD5Password);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "users");
@@ -41,14 +47,14 @@ namespace CamCan_Service
                         u.name = "";
                         u.password = "";
                     }
+
                     //If dataset contains elements
                     else
                     {
                         foreach (DataRow dr in ds.Tables[0].Rows)
                         {
-                            u.name = Convert.ToString(dr["name"]);
-                            u.completed = Convert.ToInt32(dr["scenario_completed"]);
-                            u.password = Convert.ToString(dr["password"]);
+                            u.name = Convert.ToString(dr["user_login"]);
+                            u.password = pass;
                         }
                     }
                 }
@@ -83,7 +89,7 @@ namespace CamCan_Service
                 String sqlQ = String.Format("SELECT question, ansA, ansB, ansC, ansD, correctAns FROM questions WHERE scenarioID ={0}", id);
                 MySqlDataAdapter daQ = new MySqlDataAdapter(sql, cnn);
                 DataSet dsQ = new DataSet();
-                daQ.Fill(dsQ, "scenarios");
+                daQ.Fill(dsQ, "question");
 
                 //Objects
                 Scenario s = new Scenario();
@@ -121,7 +127,6 @@ namespace CamCan_Service
                     //add questions to scenario
                     s.questionArray = questArray;
                 }
-
 
                 catch (Exception ex)
                 {
@@ -198,20 +203,78 @@ namespace CamCan_Service
                 DataSet ds = new DataSet();
                 da.Fill(ds);
 
+
                 if (ds.Tables.Count == 0)
-                    {
-                       return result;
-                    }
+                {
+                    return result;
+                }
                 else
                 {
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        result.setAnswer(dr.)
                     }
                 }
             }
-            
         }
+
+        private Boolean convertToResult(String boolString)
+        {
+            //Get the first Char of the parsed string
+            Char result = boolString.ToUpper().ToCharArray()[0];
+
+                
+            // Return True if 'Y' false other wise
+            return (result == 'Y');
+
+        }
+
+        //Convert a string to MD5
+        private string CalculateMD5Hash(string input)
+            {
+                // step 1, calculate MD5 hash from input
+                MD5 md5 = System.Security.Cryptography.MD5.Create();
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hash = md5.ComputeHash(inputBytes);
+ 
+                // step 2, convert byte array to hex string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+
+        private String getVideoLink(String bigString)
+        {
+            
+            String smallString;
+            Boolean found = false;
+            char[] seps = {'\"'};
+            String[] values = bigString.Split(seps);
+            int correctIndex = 0;
+
+            //Find the String after src
+            for(int i = 0; i<values.Length; i++)
+            {
+                if(values[i].Contains("src="))
+                {
+                    found = true;
+                    correctIndex = i + 1;
+                    break;
+                }
+            }
+
+            if(found)
+            {
+                smallString = values[correctIndex];
+                return smallString;
+            }
+            else
+                return "No Video Link Found";
+        }
+            
+    }
 
 
     }
