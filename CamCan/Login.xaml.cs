@@ -17,16 +17,13 @@ namespace CamCan
 {
     public partial class Login : PhoneApplicationPage
     {
-        UserProfile user = new UserProfile();
+        static public UserProfile user = new UserProfile();
         String password;
-
 
         public Login()
         {
             InitializeComponent();
         }
-
-
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -46,21 +43,25 @@ namespace CamCan
             //adds the information returned in the User class
             user.setUsername(e.Result.name);
             user.setCompleted(e.Result.completed);
-
-            if (user.getUsername().Equals("Empty"))
+            try
             {
+                if (user.getUsername().Equals("Empty"))
+                {
 
-                MessageBox.Show("Invalid Entry! ");
+                    MessageBox.Show("Username or/and Password is invalid!");
 
+                }
+                else
+                {
+                    this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
+
+                }
             }
-            else
+            catch (Exception)
             {
-                this.NavigationService.Navigate(new Uri("/Scenarios.xaml?User=" + user, UriKind.Relative));
-
+                MessageBox.Show("Username or/and Password is invalid!");
             }
-
         }
-
 
         private void btnInfo_Click(object sender, RoutedEventArgs e)
         {
