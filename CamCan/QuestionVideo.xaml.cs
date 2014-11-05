@@ -36,5 +36,16 @@ namespace CamCan
             this.NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
 
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Set video link
+            //MediaElement1.videoLink = MainPage.scen.videoLink;
+        }
+
+        private void mediaElement2_MediaOpened(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

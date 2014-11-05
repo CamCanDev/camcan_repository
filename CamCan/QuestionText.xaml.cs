@@ -10,11 +10,13 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using CamCan.CamCanService;
 
 namespace CamCan
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        static public Scenario scen = new Scenario();
         // Constructor
         public MainPage()
         {
@@ -23,8 +25,32 @@ namespace CamCan
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+            int scenId = Convert.ToInt32(NavigationContext.QueryString["ScenId"]);
+            //WebService connection
+            Service1Client camcanService = new Service1Client();
+            camcanService.returnScenarioCompleted += new EventHandler<returnScenarioCompletedEventArgs>(camcanService_returnScenarioCompleted);
+            camcanService.returnScenarioAsync(scenId);
+        }
+
+        //this is the event handler which is called when the event is triggered
+        void camcanService_returnScenarioCompleted(object sender, returnScenarioCompletedEventArgs e)
+        {
+            //adds the information returned in the User class
+            MessageBox.Show(e.Result.scenarioInformation);
+
+            scen.sID = e.Result._scenarioID;
+            scen.text = e.Result._scenarioInformation;
+            scen.videoLink = e.Result._videoLink;
+            //Need to populate the question array///////////////////////////////////////////
+            //scen.questionArray = e.Result.questionArray;
+
+            textBlock1.Text = scen.text;
+
+
+
 
         }
+
         private void ApplicationBarIconButton_Back(object sender, EventArgs e)
         {
             this.NavigationService.GoBack();
