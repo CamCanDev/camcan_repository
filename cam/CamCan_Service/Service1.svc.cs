@@ -69,6 +69,8 @@ namespace CamCan_Service
 
 
         //Returns Scenario
+        
+        /* Older vesion using old DB
         [WebMethod]
         public Scenario returnScenario(Int32 id)
         {
@@ -136,6 +138,70 @@ namespace CamCan_Service
                 return s;
             }
         }
+
+        */
+
+        public Scenario returnScenario(int scenarioNum)
+        {
+            
+            String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+            Scenario s = new Scenario();
+            s.scenarioId = scenarioNum;
+            Question[] q = new Question[4];
+            String bigString;
+
+            using (MySqlConnection cnn = new MySqlConnection(conString))
+            {
+             
+                cnn.Open();
+
+                //Get html text from database
+                String sql = String.Format("SELECT question FROM dgn6la8u0_wp_pro_quiz_question where id ={0}", scenarioNum);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "scenarios");
+
+                //
+                try
+                {
+                    //get html into the big string
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        bigString = Convert.ToString(dr["question"]);
+                    }
+
+                    //Video Link
+                    s.videoLink  = getVideoLink(bigString);
+
+                    //Text
+                    s.scenarioInformation = getScenarionText(bigString, scenarioNum);
+
+                    //Question 1
+                    q[0] = getQuestion(bigString,1);
+
+                    //Repeat
+                    q[1] = getQuestion(bigString,2);
+                    q[2] = getQuestion(bigString,3);
+                    q[3] = getQuestion(bigString,4);
+
+                    //Add questions to scenario
+                    s.questionArray = q;
+
+                    //Return Scenario
+                    return s;
+                }
+                catch(Exception ex)
+                {
+                    s.scenarioInformation = ex.ToString();
+                }
+
+
+                return s;
+
+            }
+
+        }
+
         
         //gets user and password and returns the scenario completed
         [WebMethod]
@@ -212,10 +278,12 @@ namespace CamCan_Service
                 {
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+
                     }
                 }
             }
         }
+
 
         private Boolean convertToResult(String boolString)
         {
@@ -245,6 +313,8 @@ namespace CamCan_Service
                 return sb.ToString();
             }
 
+
+        // Returns the youtube video link.
         private String getVideoLink(String bigString)
         {
             
@@ -265,6 +335,7 @@ namespace CamCan_Service
                 }
             }
 
+            //Returns the video link
             if(found)
             {
                 smallString = values[correctIndex];
@@ -273,6 +344,108 @@ namespace CamCan_Service
             else
                 return "No Video Link Found";
         }
+
+        //Get the scenario Text
+
+        //May Change depeneding on Database changes
+        //Will get data from the pro quiz question table
+        private String getScenarionText(String bigString, int scenarioNum)
+        {
+            
+            // Start and End of the scenarion Text substring
+            int start,end,length;
+
+
+            //Check if bigString contains "Scenarion (scenario Num)"
+            if(bigString.ToUpper().Contains("SCENARIO " + scenarioNum))
+            {
+                //Find Start of substring
+                start = bigString.ToUpper().IndexOf("SCENARIO " + scenarioNum);
+
+                //Find end (Assume first question will start with "1.")
+                end = bigString.IndexOf("1.");
+
+                //Calculate length of scenarion text
+                length = end - start;
+
+                //Return the substring
+                return bigString.Substring(start,length).Trim();
+
+            } 
+            // If no Scenario text can be found
+            else
+            {
+                return "No Scenario Text Found";
+            }
+        }
+
+        //Returns the nth question for a scenario
+        private Question getQuestion(String bigString, int questionNum)
+        {
+            //Question Object to be returned by method
+            Question retQuest = new Question();
+
+            int start,end,length;
+
+            //Check if bigString contains the question number
+            if(bigString.ToUpper().Contains(questionNum + "."))
+            {
+                
+                //Get Question text----
+
+                start = bigString.ToUpper().IndexOf(questionNum + ".");
+
+                //Find end (Assume first answer will start with "a)")
+                end = bigString.ToUpper().IndexOf("a)");
+                length = end - start;
+
+                //Set the question text
+                retQuest.questionText = bigString.Substring(start, length).Trim();
+                
+                //get answers a) - d)
+                start = bigString.ToUpper().IndexOf("a)");
+
+                //Till start of next question ("b)")
+                end = bigString.ToUpper().IndexOf("b)");
+                length = end - start;
+
+                //Set as firt answer
+                retQuest.ansA = bigString.Substring(start, length).Trim();
+
+                //Repeat for next 3 answers ----
+
+                //Question b
+                start = bigString.ToUpper().IndexOf("b)");
+                end = bigString.ToUpper().IndexOf("c)");
+                length = end - start;
+                retQuest.ansB = bigString.Substring(start, length).Trim();
+
+                //question c
+                start = bigString.ToUpper().IndexOf("c)");
+                end = bigString.ToUpper().IndexOf("d)");
+                length = end - start;
+                retQuest.ansC = bigString.Substring(start, length).Trim();
+
+                //question c
+                start = bigString.ToUpper().IndexOf("d)");
+                end = bigString.ToUpper().IndexOf("e)"); /// Fix to end of questions
+                length = end - start;
+                retQuest.ansC = bigString.Substring(start, length).Trim();
+
+                return retQuest;
+            
+            }
+            //Return a question with no data
+            else
+            {
+                retQuest.questionText = "Cannot Find Question";
+                return retQuest;
+            }
+
+        }
+
+
+
             
     }
 
