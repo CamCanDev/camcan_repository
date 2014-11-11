@@ -24,5 +24,10 @@ namespace CamCan
         {
             this.NavigationService.GoBack();
         }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -50,6 +50,8 @@
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -87,8 +89,14 @@
     <Compile Include="Result.xaml.cs">
       <DependentUpon>Result.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenario.cs" />
     <Compile Include="Scenarios.xaml.cs">
       <DependentUpon>Scenarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CamCanService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="UserProfile.cs" />
   </ItemGroup>
@@ -137,6 +145,20 @@
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
+    <None Include="Service References\CamCanService\CamCan.CamCanService.Scenario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CamCanService\CamCan.CamCanService.UserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CamCanService\Service1.wsdl" />
+    <None Include="Service References\CamCanService\Service1.xsd" />
+    <None Include="Service References\CamCanService\Service11.xsd" />
+    <None Include="Service References\CamCanService\Service12.xsd" />
+    <Resource Include="Images\loginBackground.fw2.png" />
+    <Resource Include="Images\logo_camcan.png" />
+    <Resource Include="Images\newBackground.fw.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -146,7 +168,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\back.png" />
-    <Resource Include="Images\background.png" />
     <Resource Include="Images\back_screen.png" />
     <Content Include="Images\change_text.png" />
     <Content Include="Images\change_video.png" />
@@ -155,13 +176,23 @@
     <Content Include="Images\help.png" />
     <Content Include="Images\info.png" />
     <Content Include="Images\login.png" />
-    <Resource Include="Images\loginBackground.fw2.png" />
-    <Resource Include="Images\logo_camcan.png" />
-    <Resource Include="Images\newBackground.fw.png" />
     <Content Include="Images\next.png" />
     <Content Include="Images\video-placeholder-large.jpg" />
     <Content Include="Images\wrong.png" />
+    <None Include="Service References\CamCanService\Service1.disco" />
+    <None Include="Service References\CamCanService\configuration91.svcinfo" />
+    <None Include="Service References\CamCanService\configuration.svcinfo" />
+    <None Include="Service References\CamCanService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CamCanService\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

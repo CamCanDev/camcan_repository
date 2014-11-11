@@ -24,18 +24,18 @@
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
             <ScrollViewer Height="477" HorizontalAlignment="Left" Margin="446,104,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="28"></ScrollViewer>
-            <TextBlock Height="477" HorizontalAlignment="Left" Margin="8,104,0,0" Name="tex" Text="{Binding Text}" VerticalAlignment="Top" Width="472" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
+            <TextBlock Height="477" HorizontalAlignment="Left" Margin="8,104,0,0" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Top" Width="472" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
             <Grid Background="#B20000">
-                <TextBlock x:Name="tbScenario" Text="ScenarioNum" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+                <TextBlock x:Name="tbScenario" Text="Scenario" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
             </Grid>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
