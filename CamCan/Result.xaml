@@ -35,20 +35,20 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,6,0,0" Background="{x:Null}">
-            <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="70" HorizontalAlignment="Right" Margin="0,85,83,0" Name="textBlock" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="70" HorizontalAlignment="Left" Margin="95,187,0,0" Name="textBlock1" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="70" HorizontalAlignment="Left" Margin="95,293,0,0" Name="textBlock2" Text="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="70" HorizontalAlignment="Left" Margin="95,406,0,0" Name="textBlock3" Text="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="22,202,0,0" Name="textBlock4" Text="TextBlock" VerticalAlignment="Top" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="8,82,0,0" Name="textBlock5" Text="S.1" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" TextAlignment="Center" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="8,184,0,0" Name="textBlock6" Text="S.2" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="8,293,0,0" Name="textBlock7" Text="S.3" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
-            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="8,394,0,0" Name="textBlock8" Text="S.4" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
-            <Button Background="#FFC3000D" BorderBrush="Gray" Content="Go" Height="72" HorizontalAlignment="Left" Margin="397,0,0,487" Name="button1" VerticalAlignment="Bottom" Width="78" FontSize="23" Click="btnGo_Click"/>
-            <Button Background="#FFC3000D" BorderBrush="Gray" Content="Go" Height="72" HorizontalAlignment="Left" Margin="397,0,0,385" Name="button2" VerticalAlignment="Bottom" Width="78" FontSize="23" Click="btnGo_Click"/>
-            <Button Background="#FFC3000D" BorderBrush="Gray" Content="Go" Height="72" HorizontalAlignment="Left" Margin="397,0,0,276" Name="button3" VerticalAlignment="Bottom" Width="78" FontSize="23" Click="btnGo_Click"/>
-            <Button Background="#FFC3000D" BorderBrush="Gray" Content="Go" Height="72" HorizontalAlignment="Left" Margin="397,0,0,175" Name="button4" VerticalAlignment="Bottom" Width="78" FontSize="23" Click="btnGo_Click"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="162,520,0,48" Name="btnBack" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Right" Margin="0,96,82,0" Name="textBlock" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Left" Margin="96,202,0,0" Name="textBlock1" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Left" Margin="96,308,0,0" Name="textBlock2" Text="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Left" Margin="96,414,0,0" Name="textBlock3" Text="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="23,217,0,0" Name="textBlock4" Text="TextBlock" VerticalAlignment="Top" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,96,0,0" Name="textBlock5" Text="S.1" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" TextAlignment="Center" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,202,0,0" Name="textBlock6" Text="S.2" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,308,0,0" Name="textBlock7" Text="S.3" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
+            <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,414,0,0" Name="textBlock8" Text="S.4" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,96,5,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="73" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,202,5,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="73" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,308,5,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="73" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,414,5,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="73" />
         </Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
