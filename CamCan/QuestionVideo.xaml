@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -19,18 +19,18 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="ContentPanel" Grid.RowSpan="2" Height="690" VerticalAlignment="Bottom">
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2" Height="768" VerticalAlignment="Bottom">
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <Button Content="Play" Height="111" HorizontalAlignment="Left" Margin="170,476,0,0" Name="btPlay" VerticalAlignment="Top" Width="189" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" />
-            <MediaElement Height="306" HorizontalAlignment="Left" Margin="11,121,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="463" Source="{Binding videoLink}" />
+            <Button Content="Play" Height="111" HorizontalAlignment="Left" Margin="170,526,0,0" Name="btPlay" VerticalAlignment="Top" Width="189" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" />
+            <MediaElement Height="306" HorizontalAlignment="Left" Margin="11,186,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="463" Source="{Binding videoLink}" />
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <Grid Background="#B20000">
-                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,6,150,-6" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="106" />
-                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,6,38,0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
+            <Grid Background="#B20000" Height="119">
+                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,16,150,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="106" />
+                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,22,38,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
             </Grid>
         </StackPanel>
 
@@ -39,7 +39,7 @@
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
             <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
             <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
             <shell:ApplicationBarIconButton IconUri="/Images/change_text.png" Text="Text" Click="ApplicationBarIconButton_Text" />

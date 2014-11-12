@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -19,17 +19,18 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="ContentPanel" Margin="0,12,0,0" Grid.RowSpan="2">
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <ScrollViewer Height="477" HorizontalAlignment="Left" Margin="446,104,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="28"></ScrollViewer>
-            <TextBlock Height="477" HorizontalAlignment="Left" Margin="8,104,0,0" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Top" Width="472" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
+            <ScrollViewer Height="477" HorizontalAlignment="Left" Margin="446,183,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="28"></ScrollViewer>
+            <TextBlock Height="477" HorizontalAlignment="Left" Margin="8,194,0,0" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Top" Width="472" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <Grid Background="#B20000">
-                <TextBlock x:Name="tbScenario" Text="Scenario" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+        <StackPanel x:Name="TitlePanel" Margin="0,-16,0,0" Background="#FFB20000" Height="125">
+            <Grid Background="#B20000" Height="119">
+                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,16,150,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="106" />
+                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,22,38,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
             </Grid>
         </StackPanel>
 
@@ -38,7 +39,7 @@
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
             <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
             <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
             <shell:ApplicationBarIconButton IconUri="/Images/change_video.png" Text="Text" Click="ApplicationBarIconButton_Video"/>
