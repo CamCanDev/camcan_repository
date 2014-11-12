@@ -16,5 +16,10 @@ Password : central2014
 
 
 Test Login
-
 admin - 201design
+
+FTP deatails
+
+223.27.22.124
+UserName: 04drupal
+Password: fjgff87&
