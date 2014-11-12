@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Question.cs" />
-    <Compile Include="Results.cs" />
     <Compile Include="UserProfile.cs" />
     <Compile Include="Scenario.cs" />
     <Compile Include="Service1.svc.cs">
