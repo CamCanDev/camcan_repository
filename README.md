@@ -23,3 +23,9 @@ FTP deatails
 223.27.22.124
 UserName: 04drupal
 Password: fjgff87&
+
+Database Loacation
+
+Site: https://drupal.mydesign.central.wa.edu.au:8443
+Username: drupal@mydesign.central.wa.edu.au
+Password: fjgff87&
