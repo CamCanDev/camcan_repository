@@ -28,9 +28,9 @@
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <Grid Background="#B20000" Height="119">
-                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,16,150,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="106" />
-                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,22,38,-13" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
+            <Grid Background="#B20000" Height="131">
+                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,35,150,6" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" />
+                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,35,38,-4" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
             </Grid>
         </StackPanel>
 

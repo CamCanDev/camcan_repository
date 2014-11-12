@@ -29,7 +29,7 @@
                 <TextBlock Name="userID" Text="" Margin="353,0,0,-4" />
             </Grid>
             <Grid Background="#B20000">
-                <TextBlock x:Name="PageTitle" Text="Results" Margin="0,10,0,-10" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+                <TextBlock x:Name="PageTitle" Text="Question" Margin="0,10,0,-10" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
             </Grid>
         </StackPanel>
 

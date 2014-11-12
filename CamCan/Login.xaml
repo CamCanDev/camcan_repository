@@ -27,7 +27,7 @@
         </StackPanel>-->
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
+        <Grid x:Name="ContentPanel" HorizontalAlignment="Right" Width="480" Grid.Row="1">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/loginBackground.fw2.png" />
             </Grid.Background>

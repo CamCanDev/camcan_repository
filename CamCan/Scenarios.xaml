@@ -24,7 +24,7 @@
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D"></StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
@@ -38,8 +38,10 @@
             <Button Content="Scenario 8" Height="100" HorizontalAlignment="Left" Margin="238,485,0,0" Name="btnScn8" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn8_Click" />
             <Button Content="Scenario 9" Height="100" HorizontalAlignment="Left" Margin="0,591,0,0" Name="btnScn9" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn9_Click" />
             <Button Content="Scenario 10" Height="100" HorizontalAlignment="Left" Margin="238,591,0,0" Name="btnScn10" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn10_Click" />
-            <TextBlock Height="96" HorizontalAlignment="Left" Name="textBlock1" Text="Scenarios" VerticalAlignment="Top" Width="480" FontFamily="Segoe WP SemiLight" TextAlignment="Center" FontSize="72" Margin="0,10,0,-10" />
+            <TextBlock x:Name="Scenario" Text="Scenarios" Margin="6,35,6,639" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" Height="94" />
         </Grid>
+        
+        
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
