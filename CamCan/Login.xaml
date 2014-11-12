@@ -28,12 +28,15 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="468">
-            <TextBox Height="76" Margin="51,449,46,0" Name="txtUser" Text="{Binding Username}" VerticalAlignment="Top" TextChanged="txtUser_TextChanged" TextAlignment="Center" Tap="txtUser_Tap" />
-            <TextBox Height="76" Margin="51,531,46,0" Name="txtPass" Text="{Binding Password}" VerticalAlignment="Top" TextChanged="txtPass_TextChanged" TextAlignment="Center" Tap="txtPass_Tap" />
-            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="154,595,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="button1_Click" />
             <Grid.Background>
-                <ImageBrush ImageSource="/Images/back_screen.png" />
+                <ImageBrush ImageSource="Images/loginBackground.fw2.png" />
             </Grid.Background>
+            <TextBox Height="76" Margin="51,431,46,0" Name="txtUser" Text="{Binding Username}" VerticalAlignment="Top" TextAlignment="Center"/>
+            <TextBox Height="76" Margin="51,527,46,0" Name="txtPass" Text="{Binding Password}" VerticalAlignment="Top" TextAlignment="Center"/>
+            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="154,609,0,0" Name="btnLogin" VerticalAlignment="Top" Width="160" Click="btnLogin_Click" Background="Transparent" />
+            <Image Height="239" HorizontalAlignment="Left" Margin="97,52,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="274" Source="/CamCan;component/Images/logo_camcan.png" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="65,409,0,0" Name="textBlock1" Text="Username:" VerticalAlignment="Top" Width="194" FontSize="24" />
+            <TextBlock Height="31" HorizontalAlignment="Left" Margin="65,505,0,0" Name="textBlock2" Text="Password:" VerticalAlignment="Top" Width="169" FontSize="24" />
         </Grid>
     </Grid>
 

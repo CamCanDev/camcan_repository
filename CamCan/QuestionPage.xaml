@@ -1,4 +1,4 @@
-<phone:PhoneApplicationPage 
+﻿<phone:PhoneApplicationPage 
     x:Class="CamCan.QuestionPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -34,8 +34,8 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Background="{x:Null}">
             <TextBlock FontFamily="Comic Sans MS" FontSize="25.333" Foreground="Black" Height="106" HorizontalAlignment="Left" Margin="47,81,0,0" Name="tbQuestionContent" Text="{Binding questionText}" VerticalAlignment="Top" Width="382" TextWrapping="Wrap" />
-            
-            
+
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -52,7 +52,7 @@
             </Grid>
         </Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/CamCan;component/Images/back_screen.png" />
+            <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
         </Grid.Background>
     </Grid>
 
@@ -60,9 +60,9 @@
     <phone:PhoneApplicationPage.ApplicationBar>
 
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
-                <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
-                <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
-                <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
 
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
