@@ -22,3 +22,6 @@ E:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.pdb
 E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll.config
 E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll
 E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.pdb
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.dll
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.pdb

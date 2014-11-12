@@ -141,12 +141,12 @@ namespace CamCan_Service
 
         */
 
-       /* public Scenario returnScenario(int scenarioNum)
+        public Scenario returnScenario(int scenarioNum)
         {
             
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
             Scenario s = new Scenario();
-            s.scenarioID = scenarioNum;
+            s.scenarioId = scenarioNum;
             Question[] q = new Question[4];
             String bigString;
 
@@ -156,7 +156,7 @@ namespace CamCan_Service
                 cnn.Open();
 
                 //Get html text from database
-                String sql = String.Format("SELECT question FROM dgn6la8u0_frm_fields where id ={0}", scenarioNum);
+                String sql = String.Format("SELECT question FROM dgn6la8u0_wp_pro_quiz_question where id ={0}", scenarioNum);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "scenarios");
@@ -174,10 +174,15 @@ namespace CamCan_Service
                     s.videoLink  = getVideoLink(bigString);
 
                     //Text
-                    s.scenarioInformation = getScenarionText(bigString);
+                    s.scenarioInformation = getScenarionText(bigString, scenarioNum);
 
                     //Question 1
-                    q = getQuestion(scenarioNum);
+                    q[0] = getQuestion(bigString,1);
+
+                    //Repeat
+                    q[1] = getQuestion(bigString,2);
+                    q[2] = getQuestion(bigString,3);
+                    q[3] = getQuestion(bigString,4);
 
                     //Add questions to scenario
                     s.questionArray = q;
@@ -195,36 +200,55 @@ namespace CamCan_Service
 
             }
 
-        } */
+        }
 
         
         //gets user and password and returns the scenario completed
         [WebMethod]
-        public Int32 returnComleted(String user, String pass)
+        public Int32 returnComleted(Int32 user)
         {
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-            Int32 completed = 0;
+            int completed = 0;
+            String record= "";
+            
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
                 cnn.Open();
                 //String sql = String.Format("select contact_ID from player_team where number =\"{0}\"", playerNum);
 
                 //This takes input, selects name and password and returns the scenario completed.
-                String sql = String.Format("SELECT scenario_completed FROM employees WHERE name =\"{0}\" AND password = \"{1}\"", user, pass);
+                String sql2 = String.Format("SELECT id FROM dgn6la8u0_frm_item_metas WHERE id = \"{0}\"", user);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql2, cnn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                String sql = String.Format("SELECT meta_value FROM dgn6la8u0_frm_item_metas WHERE id =\"{0}\"", user);
                 MySqlCommand cmd = new MySqlCommand(sql, cnn);
                 //returns rows
-                completed = Convert.ToInt32(cmd.ExecuteScalar());
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                             record = Convert.ToString(cmd.ExecuteScalar());
+                             if (record.Length > 9) {
+                             completed = completed + 1;
+                             }   
+                    }
+                 
             }
-            return completed;
-        }
+            return completed;      
+                                 
+            }
+            
+            
 
 
 
         [WebMethod]
-        public string insertAnswer(String user, Int32 ScenID, Int32 QuestID, String resonse, String correct)
+        public String insertAnswer(String results, String user)
         {
             String sql = "";
             Int32 Empid = -1;
+            if (results.Length != 10) {
+                return "The answer must be in the format s1q1a1 - 1";
+            }
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
             try
             {
@@ -237,7 +261,7 @@ namespace CamCan_Service
                     Empid = Convert.ToInt32(cmd.ExecuteScalar());
                     //now we have the EmpID we can continue
 
-                    sql = String.Format("Insert into results (employeeID, scenarioID, questionID, answers, correct) values ('{0}', '{1}','{2}', '{3}','{4}')", Empid, ScenID, QuestID, resonse, correct);
+                    sql = String.Format("Insert into results (employeeID, scenarioID, questionID, answers, correct) values ('{0}')", results);
                     MySqlCommand cmd2 = new MySqlCommand(sql, cnn);
                     cmd2.ExecuteNonQuery();
                     return "Inserted";
@@ -249,7 +273,7 @@ namespace CamCan_Service
             }
         }
 
-      /*  [WebMethod]
+        [WebMethod]
         public Results showResults(int scenarioID, int employeeID)
         {
             //Creating the connection string
@@ -277,7 +301,7 @@ namespace CamCan_Service
                     }
                 }
             }
-        } */
+        }
 
 
         private Boolean convertToResult(String boolString)
@@ -290,7 +314,6 @@ namespace CamCan_Service
             return (result == 'Y');
 
         }
-
 
         //Convert a string to MD5
         private string CalculateMD5Hash(string input)
@@ -341,39 +364,31 @@ namespace CamCan_Service
                 return "No Video Link Found";
         }
 
-        //Get the scenario Tex
+        //Get the scenario Text
+
         //May Change depeneding on Database changes
         //Will get data from the pro quiz question table
-        private String getScenarionText(String bigString)
+        private String getScenarionText(String bigString, int scenarioNum)
         {
             
             // Start and End of the scenarion Text substring
             int start,end,length;
-            String edit;
 
 
             //Check if bigString contains "Scenarion (scenario Num)"
-            if(bigString.Contains("Background</strong>"))
+            if(bigString.ToUpper().Contains("SCENARIO " + scenarioNum))
             {
                 //Find Start of substring
-                start = bigString.IndexOf("Background</strong>") + 17;
+                start = bigString.ToUpper().IndexOf("SCENARIO " + scenarioNum);
 
-                //Find end
-                end = bigString.Length - 4;
+                //Find end (Assume first question will start with "1.")
+                end = bigString.IndexOf("1.");
 
                 //Calculate length of scenarion text
                 length = end - start;
 
-                //Edit is the the scenaoio text with the html tags still in
-                edit = bigString.Substring(start,length).Trim();
-
-                edit.Replace("<p>","\n");
-                edit.Replace("</p>","\n");
-                edit.Replace("<strong>","");
-                edit.Replace("</strong>","");
-
-                return edit;
-
+                //Return the substring
+                return bigString.Substring(start,length).Trim();
 
             } 
             // If no Scenario text can be found
@@ -383,130 +398,69 @@ namespace CamCan_Service
             }
         }
 
-
-        /// <summary>
-        ///   Returns the answers to a question
-        /// </summary>
-        /// <param name="bigString"></param>
-        /// <returns> String[] </returns>
-        private String[] getAnswers(String bigString)
+        //Returns the nth question for a scenario
+        private Question getQuestion(String bigString, int questionNum)
         {
-            //New String
-            String[] answers = new String[4];
-            int start, end, length;
+            //Question Object to be returned by method
+            Question retQuest = new Question();
 
-            //Asnwer A
-            start = bigString.IndexOf("a)");
-            end = bigString.IndexOf("\"",start);
-            length = end - start;
-            answers[0] = bigString.Substring(start, length);
+            int start,end,length;
 
-            //Asnwer B
-            start = bigString.IndexOf("b)");
-            end = bigString.IndexOf("\"", start);
-            length = end - start;
-            answers[1] = bigString.Substring(start, length);
-
-
-            //Asnwer C
-            start = bigString.IndexOf("c)");
-            end = bigString.IndexOf("\"", start);
-            length = end - start;
-            answers[2] = bigString.Substring(start, length);
-
-            //Asnwer D
-            start = bigString.IndexOf("d)");
-            end = bigString.IndexOf("\"", start);
-            length = end - start;
-            answers[3] = bigString.Substring(start, length);
-
-            //return
-            return answers;
-
-        }
-
-
-        //--------------------------------------------------------------------
-        //Returns a scenario
-        public Scenario returnScenario(int scenarioNum)
-        {
-
-            //Creating the connection string
-            String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-            //Accessing the database via the connection string
-
-            int idStart= 0;
-            String scenString = "Scenario " + scenarioNum;
-            Scenario s = new Scenario();
-            int id=0;
-            String vidLink;
-            String[] answers = new String[4];
-
-            using (MySqlConnection cnn = new MySqlConnection(conString))
+            //Check if bigString contains the question number
+            if(bigString.ToUpper().Contains(questionNum + "."))
             {
-                //Question Object to be returned by method
-                Question[] retQuest = new Question[4];
-                String scenText = "";
-
-                cnn.Open();
-                String sql = String.Format("SELECT id, description from dgn6la8u0_frm_fields where name = \"{0}\"",scenString);
-                MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                try{
-                    
-                    //Get Data from table
-                    foreach(DataRow dr in ds.Tables[0].Rows)
-                        {
-                            id = Convert.ToInt32(dr["id"]);
-                            idStart = id + 1;
-                            scenText = Convert.ToString(dr["description"]);
-                        }
                 
-                    //add to scenario
-                    s.scenarioID = id;
-                    s.scenarioInformation = getScenarionText(scenText);
-                    vidLink = getVideoLink(scenText);
-                    s.videoLink = vidLink;
+                //Get Question text----
 
+                start = bigString.ToUpper().IndexOf(questionNum + ".");
+
+                //Find end (Assume first answer will start with "a)")
+                end = bigString.ToUpper().IndexOf("a)");
+                length = end - start;
+
+                //Set the question text
+                retQuest.questionText = bigString.Substring(start, length).Trim();
                 
-                }
-                catch(Exception ex)
-                {
-                    //Do something
-                    s.scenarioInformation = ex.ToString();
-                }
+                //get answers a) - d)
+                start = bigString.ToUpper().IndexOf("a)");
 
-                sql = String.Format("SELECT name, options from dgn6la8u0_frm_fields where id in ({0},{1},{2},{3})",idStart ,idStart + 1,idStart + 2,idStart + 3);
-                da = new MySqlDataAdapter(sql, cnn);
-                ds = new DataSet();
-                da.Fill(ds);
-                int i = 0;
-                try{
-                    foreach(DataRow dr in ds.Tables[0].Rows)
-                    {
-                        retQuest[i].questionText = Convert.ToString(dr["name"]);
-                        answers = getAnswers(Convert.ToString(dr["options"]));
-                        retQuest[i].ansA = answers[0];
-                        retQuest[i].ansB = answers[1];
-                        retQuest[i].ansC = answers[2];
-                        retQuest[i].ansD = answers[3];
-                        i++;
-                    }
-                
-                    // Add questions to scenario
-                    s.questionArray = retQuest;
+                //Till start of next question ("b)")
+                end = bigString.ToUpper().IndexOf("b)");
+                length = end - start;
 
-                }
-                catch(Exception ex)
-                {
-                    //Do Something
-                    s.scenarioInformation = ex.ToString();
-                }
+                //Set as firt answer
+                retQuest.ansA = bigString.Substring(start, length).Trim();
 
-                return s;
+                //Repeat for next 3 answers ----
+
+                //Question b
+                start = bigString.ToUpper().IndexOf("b)");
+                end = bigString.ToUpper().IndexOf("c)");
+                length = end - start;
+                retQuest.ansB = bigString.Substring(start, length).Trim();
+
+                //question c
+                start = bigString.ToUpper().IndexOf("c)");
+                end = bigString.ToUpper().IndexOf("d)");
+                length = end - start;
+                retQuest.ansC = bigString.Substring(start, length).Trim();
+
+                //question c
+                start = bigString.ToUpper().IndexOf("d)");
+                end = bigString.ToUpper().IndexOf("e)"); /// Fix to end of questions
+                length = end - start;
+                retQuest.ansC = bigString.Substring(start, length).Trim();
+
+                return retQuest;
+            
             }
+            //Return a question with no data
+            else
+            {
+                retQuest.questionText = "Cannot Find Question";
+                return retQuest;
+            }
+
         }
 
 
@@ -516,3 +470,4 @@ namespace CamCan_Service
 
 
     }
+}
