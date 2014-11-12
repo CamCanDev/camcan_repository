@@ -23,8 +23,10 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
             <Grid Height="26" Background="#B20000">
-                <TextBlock Height="30" Name="tbScenario" Text="Scenario" Margin="0,0,357,0" />
-                <TextBlock Height="30" Name="tbScenarioID" Text="{Binding id}" Margin="81,0,357,0" />
+                <TextBlock Height="30" Name="user" Text="Username" Margin="261,0,0,-4" />
+                <TextBlock Height="30" Name="tbScenario" Text="Scenario" Margin="0,0,357,-4" />
+                <TextBlock Height="30" Name="tbScenarioID" Text="{Binding id}" Margin="81,0,357,-4" />
+                <TextBlock Name="userID" Text="" Margin="353,0,0,-4" />
             </Grid>
             <Grid Background="#B20000">
                 <TextBlock x:Name="PageTitle" Text="Results" Margin="0,10,0,-10" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />

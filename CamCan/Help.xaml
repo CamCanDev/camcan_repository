@@ -30,14 +30,14 @@
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
-            <TextBlock FontFamily="Arial" FontSize="55" Margin="211,87,128,574" Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Text="Help" TextAlignment="Center" />
+            <TextBlock FontFamily="Arial" FontSize="55" Margin="210,84,129,577" Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Text="Help" TextAlignment="Center" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="65" HorizontalAlignment="Left" Margin="76,325,0,0" Name="textBlock2" Text="Select a scenario you want to answer" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="65" HorizontalAlignment="Left" Margin="76,437,0,0" Name="textBlock1" Text="Read and understand the written scenario" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="94" HorizontalAlignment="Left" Margin="76,549,0,0" Name="textBlock3" Text="Proceed to the next page and answer the following questions" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,284,0,0" Name="textBlock4" Text="Step 1" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,396,0,0" Name="textBlock5" Text="Step 2" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
             <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,508,0,0" Name="textBlock6" Text="Step 3" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
-            <Image Height="140" HorizontalAlignment="Left" Margin="42,87,0,0" Name="image1" Source="/CamCan;component/Images/logo_camcan.png" Stretch="Fill" VerticalAlignment="Top" Width="163" />
+            <Image Height="140" HorizontalAlignment="Left" Margin="41,84,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="163" Source="/CamCan;component/Images/logo_camcan.png" />
         </Grid>
     </Grid>
 
