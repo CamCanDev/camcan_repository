@@ -22,12 +22,12 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"></StackPanel>
-        <Grid Grid.RowSpan="2" HorizontalAlignment="Right" Margin="0,10,2,0" Name="ContentPanel" Width="468">
+        <Grid Grid.RowSpan="2" HorizontalAlignment="Right" Margin="0,0,2,0" Name="ContentPanel" Width="478">
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/loginBackground.fw2.png" />
             </Grid.Background>
-            <Image Height="225" HorizontalAlignment="Left" Margin="125,52,0,0" Name="image1" OpacityMask="{x:Null}" Source="/CamCan;component/Images/camcan.png" Stretch="Fill" VerticalAlignment="Top" Width="258" />
-            <TextBlock Height="90" HorizontalAlignment="Left" Margin="125,448,0,0" Name="textBlock1" Text="Loading..." VerticalAlignment="Top" Width="232" FontSize="40" />
+            <Image Height="239" HorizontalAlignment="Left" Margin="97,52,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="274" Source="/CamCan;component/Images/logo_camcan.png" />
+            <TextBlock HorizontalAlignment="Left" Margin="97,351,0,357" Name="textBlock1" Text="Loading..." Width="179" FontSize="40" Height="60" />
         </Grid>
         <!--ContentPanel - place additional content here-->
     </Grid>
