@@ -38,7 +38,7 @@
             <Button Content="Scenario 8" Height="100" HorizontalAlignment="Left" Margin="238,485,0,0" Name="btnScn8" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn8_Click" />
             <Button Content="Scenario 9" Height="100" HorizontalAlignment="Left" Margin="0,591,0,0" Name="btnScn9" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn9_Click" />
             <Button Content="Scenario 10" Height="100" HorizontalAlignment="Left" Margin="238,591,0,0" Name="btnScn10" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn10_Click" />
-            <TextBlock Height="96" HorizontalAlignment="Left" Name="textBlock1" Text="Scenarios" VerticalAlignment="Top" Width="480" FontFamily="Arial" TextAlignment="Center" FontSize="72" />
+            <TextBlock Height="96" HorizontalAlignment="Left" Name="textBlock1" Text="Scenarios" VerticalAlignment="Top" Width="480" FontFamily="Arial" TextAlignment="Center" FontSize="72" Margin="0,27,0,0" />
         </Grid>
     </Grid>
 
