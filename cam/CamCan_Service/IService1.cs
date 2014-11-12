@@ -14,7 +14,7 @@ namespace CamCan_Service
     {
         // returns the scenID, Info and video Link
         [OperationContract]
-        Scenario returnScenario(Int32 id);
+        Scenario returnScenario(int scenarioNum);
 
         //returns users completed scenarios
         [OperationContract]

@@ -13,3 +13,8 @@ git config --global http.proxy http://pe-tmg-w102:8080
 Ninja Mock Login
 Username : 041401076@my.central.wa.edu.au
 Password : central2014
+
+
+Test Login
+
+admin - 201design
