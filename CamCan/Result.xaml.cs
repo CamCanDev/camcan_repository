@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Windows.Media.Imaging;
 
 namespace CamCan
 {
@@ -41,20 +42,20 @@ namespace CamCan
 
             if (MainPage.scen.questions[0].selectedAnswer == MainPage.scen.questions[0].correctAnswer)
             {
-                //Test for checking if answer is correct, to be replaced with code to change image from wrong.png to done.png (R.A.)
-                MessageBox.Show("Correct");
+                //Check if user has chosen the correct answer and if correct change image from wrong.png to done.png (R.A.)
+                image1.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
             }
             if (MainPage.scen.questions[1].selectedAnswer == MainPage.scen.questions[1].correctAnswer)
             {
-
+                image2.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
             }
             if (MainPage.scen.questions[2].selectedAnswer == MainPage.scen.questions[2].correctAnswer)
             {
-
+                image3.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
             }
             if (MainPage.scen.questions[3].selectedAnswer == MainPage.scen.questions[3].correctAnswer)
             {
-
+                image4.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
             }
         }
     }

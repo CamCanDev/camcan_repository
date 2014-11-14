@@ -45,10 +45,10 @@
             <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,202,0,0" Name="textBlock6" Text="S.2" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,308,0,0" Name="textBlock7" Text="S.3" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="40" Foreground="Black" Height="73" HorizontalAlignment="Left" Margin="9,414,0,0" Name="textBlock8" Text="S.4" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" />
-            <Image Height="70" HorizontalAlignment="Right" Margin="0,96,5,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="73" />
-            <Image Height="70" HorizontalAlignment="Right" Margin="0,202,5,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="73" />
-            <Image Height="70" HorizontalAlignment="Right" Margin="0,308,5,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="73" />
-            <Image Height="70" HorizontalAlignment="Right" Margin="0,414,5,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="73" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,96,5,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="73" Source="/CamCan;component/Images/wrong.png" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,202,5,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="73" Source="/CamCan;component/Images/wrong.png" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,308,5,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="73" Source="/CamCan;component/Images/wrong.png" />
+            <Image Height="70" HorizontalAlignment="Right" Margin="0,414,5,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="73" Source="/CamCan;component/Images/wrong.png" />
         </Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
