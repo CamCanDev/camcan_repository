@@ -29,5 +29,33 @@ namespace CamCan
         {
             this.NavigationService.Navigate(new Uri("/Feedback.xaml", UriKind.Relative));
         }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = MainPage.scen.questions[0].questionText;
+            textBlock1.Text = MainPage.scen.questions[1].questionText;
+            textBlock2.Text = MainPage.scen.questions[2].questionText;
+            textBlock3.Text = MainPage.scen.questions[3].questionText;
+
+            //code to check if selected answers match correct answers (R.A.)
+
+            if (MainPage.scen.questions[0].selectedAnswer == MainPage.scen.questions[0].correctAnswer)
+            {
+                //Test for checking if answer is correct, to be replaced with code to change image from wrong.png to done.png (R.A.)
+                MessageBox.Show("Correct");
+            }
+            if (MainPage.scen.questions[1].selectedAnswer == MainPage.scen.questions[1].correctAnswer)
+            {
+
+            }
+            if (MainPage.scen.questions[2].selectedAnswer == MainPage.scen.questions[2].correctAnswer)
+            {
+
+            }
+            if (MainPage.scen.questions[3].selectedAnswer == MainPage.scen.questions[3].correctAnswer)
+            {
+
+            }
+        }
     }
 }
