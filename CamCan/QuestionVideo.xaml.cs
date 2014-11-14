@@ -47,5 +47,10 @@ namespace CamCan
 
         }
 
+        private void btPlay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

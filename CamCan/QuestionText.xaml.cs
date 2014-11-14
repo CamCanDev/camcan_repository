@@ -35,15 +35,12 @@ namespace CamCan
         //this is the event handler which is called when the event is triggered
         void camcanService_returnScenarioCompleted(object sender, returnScenarioCompletedEventArgs e)
         {
-            //adds the information returned in the User class
-            MessageBox.Show(e.Result.scenarioInformation);
+            //adds the information returned in the User class (R.A.)
 
             scen.sID = e.Result._scenarioID;
             scen.text = e.Result._scenarioInformation;
             scen.videoLink = e.Result._videoLink;
-            //Need to populate the question array///////////////////////////////////////////
-            //scen.questionArray = e.Result.questionArray;
-
+            //scen.questions = e.Result.questionArray; This isn't working yet (R.A.)
             tbScenText.Text = scen.text;
 
 

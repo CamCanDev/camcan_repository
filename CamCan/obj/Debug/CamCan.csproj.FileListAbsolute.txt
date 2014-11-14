@@ -194,3 +194,4 @@ E:\camcan_login\CamCan\obj\Debug\CamCan.g.resources
 E:\camcan_login\CamCan\obj\Debug\CamCan.dll
 E:\camcan_login\CamCan\obj\Debug\CamCan.pdb
 E:\camcan_login\CamCan\obj\Debug\XapCacheFile.xml
+C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs

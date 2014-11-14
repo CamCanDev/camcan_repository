@@ -18,7 +18,11 @@ namespace CamCan
         public int sID { get; set; }
         public string text { get; set; }
         public string videoLink { get; set; }
-        public List<Object> questions { get; set; }
+        public List<Question> questions { get; set; }
+
+        public Scenario()
+        { 
+        }
 
     }
 }
