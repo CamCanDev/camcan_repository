@@ -146,7 +146,7 @@ namespace CamCan_Service
             
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
             Scenario s = new Scenario();
-            s.scenarioId = scenarioNum;
+            s.scenarioID = scenarioNum;
             Question[] q = new Question[4];
             String bigString;
 
