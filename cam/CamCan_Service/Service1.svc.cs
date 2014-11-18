@@ -31,9 +31,9 @@ namespace CamCan_Service
                 cnn.Open();
 
                 // Convert password to MD5
-                mD5Password = CalculateMD5Hash(pass);
+                //mD5Password = CalculateMD5Hash(pass);
 
-                String sql = String.Format("SELECT * FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, mD5Password);
+                String sql = String.Format("SELECT * FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, pass);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "users");
@@ -148,7 +148,7 @@ namespace CamCan_Service
             Scenario s = new Scenario();
             s.scenarioID = scenarioNum;
             Question[] q = new Question[4];
-            String bigString;
+            String bigString = "";
 
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
@@ -208,39 +208,45 @@ namespace CamCan_Service
         public Int32 returnComleted(Int32 user)
         {
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-            int completed = 0;
             String record= "";
-            
+            int max=0, compare;
+
+            //
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
                 cnn.Open();
-                //String sql = String.Format("select contact_ID from player_team where number =\"{0}\"", playerNum);
-
-                //This takes input, selects name and password and returns the scenario completed.
-                String sql2 = String.Format("SELECT id FROM dgn6la8u0_frm_item_metas WHERE id = \"{0}\"", user);
-                MySqlDataAdapter da = new MySqlDataAdapter(sql2, cnn);
+                // Returns user id and corresponding completion string
+                String sql = String.Format("SELECT i.user_id, im.meta_value FROM `dgn6la8u0_frm_item_metas` im JOIN `dgn6la8u0_frm_items` i ON im.item_id=i.id WHERE user_id = {0}",user);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                String sql = String.Format("SELECT meta_value FROM dgn6la8u0_frm_item_metas WHERE id =\"{0}\"", user);
                 MySqlCommand cmd = new MySqlCommand(sql, cnn);
-                //returns rows
+                // find max scenarion number
                 foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                             record = Convert.ToString(cmd.ExecuteScalar());
-                             if (record.Length > 9) {
-                             completed = completed + 1;
-                             }   
+                        //get scen number from dataset
+                        compare = Convert.ToInt32(Convert.ToString(dr["meta_value"]).ToCharArray()[1]);
+                        if(compare>max)
+                        {
+                            max= compare;
+                        }
                     }
                  
+
             }
-            return completed;      
+            return max;      
                                  
             }
             
             
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="results"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [WebMethod]
         public String insertAnswer(String results, String user)
         {
@@ -255,13 +261,14 @@ namespace CamCan_Service
                 using (MySqlConnection cnn = new MySqlConnection(conString))
                 {
                     cnn.Open();
-                    sql = String.Format("SELECT employeeID FROM employees WHERE name =\"{0}\" ", user);
+                    sql = String.Format("SELECT i.user_id, im.meta_value FROM `dgn6la8u0_frm_item_metas` im JOIN `dgn6la8u0_frm_items` i ON im.item_id=i.id WHERE user_id = {0}",user);
                     MySqlCommand cmd = new MySqlCommand(sql, cnn);
                     //returns rows
                     Empid = Convert.ToInt32(cmd.ExecuteScalar());
                     //now we have the EmpID we can continue
 
-                    sql = String.Format("Insert into results (employeeID, scenarioID, questionID, answers, correct) values ('{0}')", results);
+                    sql = String.Format("INSERT INTO `dgn6la8u0_frm_item_metas`(meta_value, item_id, created_at) VALUES('?', '?', CURDATE()");
+                    //sql = String.Format("Insert into results (employeeID, scenarioID, questionID, answers, correct) values ('{0}')", results);
                     MySqlCommand cmd2 = new MySqlCommand(sql, cnn);
                     cmd2.ExecuteNonQuery();
                     return "Inserted";
@@ -273,35 +280,48 @@ namespace CamCan_Service
             }
         }
 
+
+
+
         [WebMethod]
-        public Results showResults(int scenarioID, int employeeID)
+        public Results showResults(int scenarioNum, int userID)
         {
             //Creating the connection string
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+            //Increments each found scenarion
+            int incrementer = 0;
             //Accessing the database via the connection string
+            Results result = new Results();
+
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
                 cnn.Open();
-                String sql = String.Format("SELECT scenarioID, questionID, answer, correct FROM results WHERE employeeID = {0} AND ScenarioID = {1}", scenarioID, employeeID);
-                Results result = new Results();
+                String sql = String.Format("SELECT i.user_id, im.meta_value FROM `dgn6la8u0_frm_item_metas` im JOIN `dgn6la8u0_frm_items` i ON im.item_id=i.id WHERE user_id = {0}",userID);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-
-
-                if (ds.Tables.Count == 0)
-                {
-                    return result;
-                }
-                else
-                {
-                    foreach (DataRow dr in ds.Tables[0].Rows)
+                
+                //Find all match scenario numbers
+                foreach (DataRow dr in ds.Tables[0].Rows)
                     {
+                        //get scen number from dataset
+                        if (scenarioNum == Convert.ToInt32(Convert.ToString(dr["meta_value"]).ToCharArray()[1]))
+                        {
+                            if (incrementer > 3) break;
+                            result.answer[incrementer] = Convert.ToInt32(Convert.ToString(dr["meta_value"]).ToCharArray()[5]);
+                            result.correct[incrementer] = Convert.ToInt32(Convert.ToString(dr["meta_value"]).ToCharArray()[9]);
+                            incrementer++;
+                        }
 
                     }
-                }
+
             }
+
+            //Retunr the result
+            return result;
         }
+
+
 
 
         private Boolean convertToResult(String boolString)
@@ -460,8 +480,29 @@ namespace CamCan_Service
                 retQuest.questionText = "Cannot Find Question";
                 return retQuest;
             }
+        }
+
+        //Return array fo questions
+        private String[] getQuestions(String bigString)
+        {
+            
+            String[] quest = new String[4];
+            char[] seps = {'\"'};
+            String[] values = bigString.Split(seps);
+            int current = 0;
+
+            //Find the String after src
+            for(int i = 0; i<values.Length; i++)
+            {
+                if(values[i].Contains("*_answer"))
+                {
+                    quest[current] = 
+                }
+            }
 
         }
+
+        
 
 
 

@@ -8,13 +8,17 @@ namespace CamCan_Service
     public class Results
     {
         public int scenarioID;
-        public int questionID;
-        public String answer;
-        public bool correct;
+        public int[] answer;
+        public int[] correct;
+
+        public Results()
+        {
+            answer = new int[4];
+            correct = new int[4];
+        }
 
         public int scenario { get; set; }
-        public int question { get; set; }
-        public String _answer { get; set; }
-        public bool _correct { get; set; }
+        public int[] _answer { get; set; }
+        public int[] _correct { get; set; }
     }
 }
