@@ -13,16 +13,11 @@ using Microsoft.Phone.Controls;
 
 namespace CamCan
 {
-    public partial class Feedback : PhoneApplicationPage
+    public partial class finish : PhoneApplicationPage
     {
-        public Feedback()
+        public finish()
         {
             InitializeComponent();
-        }
-
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("/Result.xaml", UriKind.Relative));
         }
     }
 }

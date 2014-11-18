@@ -35,7 +35,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,6,0,0" Background="{x:Null}">
-            <Button Content="Back" HorizontalAlignment="Left" Margin="162,520,0,48" Name="btnBack" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
+            <Button Content="Finish" HorizontalAlignment="Left" Margin="162,520,0,48" Name="btnFinish" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Right" Margin="0,96,82,0" Name="textBlock" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Left" Margin="96,202,0,0" Name="textBlock1" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
             <TextBlock FontFamily="Comic Sans MS" FontSize="20" Foreground="Black" Height="100" HorizontalAlignment="Left" Margin="96,308,0,0" Name="textBlock2" Text="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="302" DataContext="{Binding}" />
