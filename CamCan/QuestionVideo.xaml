@@ -23,8 +23,9 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <Button Content="Play" Height="111" HorizontalAlignment="Left" Margin="141,520,0,0" Name="btPlay" VerticalAlignment="Top" Width="189" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" Click="btPlay_Click" />
-            <MediaElement Height="306" HorizontalAlignment="Left" Margin="6,208,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="463" Source="{Binding videoLink}" />
+            <Button Content="Play" Height="90" HorizontalAlignment="Left" Margin="6,605,0,0" Name="btPlay" VerticalAlignment="Top" Width="140" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" Click="btPlay_Click" />
+            <Button BorderBrush="DarkRed" Content="Pause" FontSize="32" Foreground="DarkRed" HorizontalAlignment="Left" Margin="334,605,0,73" Name="btnPause" Width="140" Height="90" Click="btnPause_Click" />
+            <MediaElement Height="392" HorizontalAlignment="Left" Margin="6,221,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="468" Source="Videos\ROUGH FOR APP TESTING_WEB - Cellular.m4v" AutoPlay="False" Stretch="Uniform"/>
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">

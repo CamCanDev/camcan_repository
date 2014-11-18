@@ -23,8 +23,8 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <ScrollViewer Height="477" HorizontalAlignment="Left" Margin="446,183,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="28"></ScrollViewer>
-            <TextBlock Height="494" HorizontalAlignment="Left" Margin="8,183,0,0" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Top" Width="466" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
+            <ScrollViewer Height="436" HorizontalAlignment="Left" Margin="446,224,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="28"></ScrollViewer>
+            <TextBlock Height="457" HorizontalAlignment="Left" Margin="8,224,0,0" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Top" Width="466" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
