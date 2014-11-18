@@ -21,7 +21,22 @@ namespace CamCan
         public List<Question> questions { get; set; }
 
         public Scenario()
-        { 
+        {
+            questions = new List<Question>();
+            
+        }
+
+        public void testScenario()
+        {
+            text = "Text scenario teste ";
+            videoLink = "/Videos/ROUGH FOR APP TESTING_WEB - Cellular.mp4";
+            Question quest = new Question();
+            quest.testQuestion();
+            questions.Add(quest);
+            questions.Add(quest);
+            questions.Add(quest);
+            questions.Add(quest);
+
         }
 
     }

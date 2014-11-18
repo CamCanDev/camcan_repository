@@ -15,6 +15,8 @@ namespace CamCan
 {
     public partial class Scenarios : PhoneApplicationPage
     {
+        static public Scenario scen = new Scenario();
+        
         public Scenarios()
         {
             InitializeComponent();
@@ -23,59 +25,69 @@ namespace CamCan
         //Click events for scenario selection. Navigates to question page and parses the id for the chosen scenario (R.A.)
         private void btnScn1_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=1" , UriKind.Relative));
+            scen.sID = 1;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml" , UriKind.Relative));
         }
 
         private void btnScn2_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionVideo.xaml?ScenId=2", UriKind.Relative));
+            scen.sID = 2;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn3_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=3", UriKind.Relative));
+            scen.sID = 3;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn4_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=4", UriKind.Relative));
+            scen.sID = 4;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn5_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=5", UriKind.Relative));
+            scen.sID = 5;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn6_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=6", UriKind.Relative));
+            scen.sID = 6;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn7_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=7", UriKind.Relative));
+            scen.sID = 7;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn8_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=8", UriKind.Relative));
+            scen.sID = 8;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn9_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=9", UriKind.Relative));
+            scen.sID = 9;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn10_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml?ScenId=10", UriKind.Relative));
+            scen.sID = 10;
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
 
         //App bar click events. Navigates to info or help page (R.A.)
         private void ApplicationBarIconButton_Info_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Info.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/Information.xaml", UriKind.Relative));
         }
 
         private void ApplicationBarIconButton_Help_Click(object sender, RoutedEventArgs e)

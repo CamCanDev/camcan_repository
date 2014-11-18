@@ -31,5 +31,12 @@ namespace CamCan
         public int getCompleted(){
             return completed;
         }
+
+        public void testUser()
+        {
+            username = "Admin test";
+            completed = 5;
+
+        }
     }
 }

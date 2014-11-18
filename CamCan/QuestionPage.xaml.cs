@@ -27,9 +27,15 @@ namespace CamCan
         //If user clicks back, the context should be set to the previous question (R.A.)
         private void ApplicationBarIconButton_Back(object sender, EventArgs e)
         {
-            questionNum -= 1;
-            this.NavigationService.GoBack();
-            setContext();
+            if (questionNum.Equals(0))
+            {
+                this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            } else{
+                questionNum -= 1;
+                this.NavigationService.GoBack();
+                setContext();
+            }
+            
         }
 
         //If user clicks forward, this sets the selected variable and executes the next() method, if no radio buttons are selected a messagebox is displayed telling the user to choose an answer (R.A.)
@@ -71,7 +77,7 @@ namespace CamCan
         {
             if (questionNum < 3)
             {
-                CamCan.MainPage.scen.questions[questionNum].selectedAnswer = selected;
+                Scenarios.scen.questions[questionNum].selectedAnswer = selected;
                 questionNum += 1;
                 setContext();
             }
@@ -84,7 +90,7 @@ namespace CamCan
         //Method to set the data context for the page (R.A.)
         private void setContext()
         {
-            ContentPanel.DataContext = CamCan.MainPage.scen.questions[questionNum];
+            ContentPanel.DataContext = Scenarios.scen.questions[questionNum];
         }
 
         //Set data context on page load (R.A.)

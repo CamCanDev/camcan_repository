@@ -15,8 +15,7 @@ using CamCan.CamCanService;
 namespace CamCan
 {
     public partial class MainPage : PhoneApplicationPage
-    {
-        static public Scenario scen = new Scenario();
+    {        
         // Constructor
         public MainPage()
         {
@@ -24,12 +23,17 @@ namespace CamCan
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            int scenId = Convert.ToInt32(NavigationContext.QueryString["ScenId"]);
+        {            
             //WebService connection
-            Service1Client camcanService = new Service1Client();
-            camcanService.returnScenarioCompleted += new EventHandler<returnScenarioCompletedEventArgs>(camcanService_returnScenarioCompleted);
-            camcanService.returnScenarioAsync(scenId);
+            //Service1Client camcanService = new Service1Client();
+            //camcanService.returnScenarioCompleted += new EventHandler<returnScenarioCompletedEventArgs>(camcanService_returnScenarioCompleted);
+            //camcanService.returnScenarioAsync(scen.sID);
+
+            //Function to test the application without connection on the webservice(G.D)
+            Scenarios.scen.testScenario();
+            tbScenText.Text = Scenarios.scen.text;
+            tbScenario.Text = Scenarios.scen.sID.ToString();
+
         }
 
         //this is the event handler which is called when the event is triggered
@@ -37,20 +41,17 @@ namespace CamCan
         {
             //adds the information returned in the User class (R.A.)
 
-            scen.sID = e.Result._scenarioID;
-            scen.text = e.Result._scenarioInformation;
-            scen.videoLink = e.Result._videoLink;
+            Scenarios.scen.sID = e.Result._scenarioID;
+            Scenarios.scen.text = e.Result._scenarioInformation;
+            Scenarios.scen.videoLink = e.Result._videoLink;
             //scen.questions = e.Result.questionArray; This isn't working yet (R.A.)
-            tbScenText.Text = scen.text;
-
-
-
-
+            tbScenText.Text = Scenarios.scen.text;
+            tbScenario.Text = Scenarios.scen.sID.ToString();
         }
 
         private void ApplicationBarIconButton_Back(object sender, EventArgs e)
         {
-            this.NavigationService.GoBack();
+            this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
         private void ApplicationBarIconButton_Forward(object sender, EventArgs e)
         {

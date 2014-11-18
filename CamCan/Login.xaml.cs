@@ -31,10 +31,13 @@ namespace CamCan
             password = txtPass.Text;
 
             //WebService connection
-            Service1Client camcanService = new Service1Client();
-            camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
-            camcanService.returnUserAsync(user.getUsername(), password);
+            //Service1Client camcanService = new Service1Client();
+            //camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
+            //camcanService.returnUserAsync(user.getUsername(), password);
 
+            //Function to test the application without connection on the webservice(G.D)
+            user.testUser();
+            this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
 
         //this is the event handler which is called when the event is triggered
@@ -61,11 +64,6 @@ namespace CamCan
             {
                 MessageBox.Show("Username or/and Password is invalid!");
             }
-        }
-
-        private void btnInfo_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("/Information.xaml", UriKind.Relative));
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)

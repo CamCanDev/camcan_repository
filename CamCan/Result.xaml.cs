@@ -16,9 +16,39 @@ namespace CamCan
 {
     public partial class Result : PhoneApplicationPage
     {
+        BitmapImage imgWrong = new BitmapImage(new Uri("Images/wrong.png", UriKind.Relative));
+        BitmapImage imgCorrect = new BitmapImage(new Uri("Images/done.png", UriKind.Relative));
+
         public Result()
         {
+                      
             InitializeComponent();
+            tbScenarioID.Text = Scenarios.scen.sID.ToString();
+            userID.Text = Login.user.getUsername();
+            textBlock.Text = Scenarios.scen.questions[0].questionText;
+            textBlock1.Text = Scenarios.scen.questions[1].questionText;
+            textBlock2.Text = Scenarios.scen.questions[2].questionText;
+            textBlock3.Text = Scenarios.scen.questions[3].questionText;
+
+            //code to check if selected answers match correct answers (R.A.)
+
+            if (Scenarios.scen.questions[0].selectedAnswer == Scenarios.scen.questions[0].correctAnswer)
+            {
+                //Check if user has chosen the correct answer and if correct change image from wrong.png to done.png (R.A.)
+                image1.Source = imgCorrect;
+            }
+            if (Scenarios.scen.questions[1].selectedAnswer == Scenarios.scen.questions[1].correctAnswer)
+            {
+                image2.Source = imgCorrect;
+            }
+            if (Scenarios.scen.questions[2].selectedAnswer == Scenarios.scen.questions[2].correctAnswer)
+            {
+                image3.Source = imgCorrect;
+            }
+            if (Scenarios.scen.questions[3].selectedAnswer == Scenarios.scen.questions[3].correctAnswer)
+            {
+                image4.Source = imgCorrect;
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -29,34 +59,6 @@ namespace CamCan
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/Feedback.xaml", UriKind.Relative));
-        }
-
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            textBlock.Text = MainPage.scen.questions[0].questionText;
-            textBlock1.Text = MainPage.scen.questions[1].questionText;
-            textBlock2.Text = MainPage.scen.questions[2].questionText;
-            textBlock3.Text = MainPage.scen.questions[3].questionText;
-
-            //code to check if selected answers match correct answers (R.A.)
-
-            if (MainPage.scen.questions[0].selectedAnswer == MainPage.scen.questions[0].correctAnswer)
-            {
-                //Check if user has chosen the correct answer and if correct change image from wrong.png to done.png (R.A.)
-                image1.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
-            }
-            if (MainPage.scen.questions[1].selectedAnswer == MainPage.scen.questions[1].correctAnswer)
-            {
-                image2.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
-            }
-            if (MainPage.scen.questions[2].selectedAnswer == MainPage.scen.questions[2].correctAnswer)
-            {
-                image3.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
-            }
-            if (MainPage.scen.questions[3].selectedAnswer == MainPage.scen.questions[3].correctAnswer)
-            {
-                image4.Source = new BitmapImage(new Uri("/CamCan;component/Images/done.png"));
-            }
         }
     }
 }
