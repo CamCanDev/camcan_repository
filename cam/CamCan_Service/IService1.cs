@@ -18,7 +18,7 @@ namespace CamCan_Service
 
         //returns users completed scenarios
         [OperationContract]
-        Int32 returnComleted(String user, String pass);
+        Int32 returnComleted(Int32 user);
 
         //Returns a user from database
         [OperationContract]
@@ -26,9 +26,8 @@ namespace CamCan_Service
 
         //inserts the correct answer into the results table
         [OperationContract]
-        string insertAnswer(String Empid, Int32 ScenID, Int32 QuestID, String resonse, String correct);
+        string insertAnswer(String results, String user);
 
 
-        //needs another operation to GetQuestions
     }
 }

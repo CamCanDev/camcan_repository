@@ -23,7 +23,6 @@ namespace CamCan_Service
         public UserProfile returnUser(String user, String pass)
         {
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-            String mD5Password;
 
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
@@ -157,7 +156,6 @@ namespace CamCan_Service
         public Int32 returnComleted(Int32 user)
         {
             String conString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-            String record= "";
             int max=0, compare;
 
             //
@@ -190,6 +188,7 @@ namespace CamCan_Service
             
 
 
+        /////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Needs To Be Done still !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         /// <summary>
         /// 
         /// </summary>
