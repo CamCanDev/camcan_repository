@@ -32,7 +32,7 @@ namespace CamCan_Service
                 // Convert password to MD5
                 //mD5Password = CalculateMD5Hash(pass);
 
-                String sql = String.Format("SELECT * FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, pass);
+                String sql = String.Format("SELECT ID FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, pass);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "users");
@@ -54,6 +54,7 @@ namespace CamCan_Service
                         {
                             u.name = Convert.ToString(dr["user_login"]);
                             u.password = pass;
+                            u.id = Convert.ToInt32(dr["ID"]);
                         }
                     }
                 }
@@ -336,6 +337,10 @@ namespace CamCan_Service
 
         //May Change depeneding on Database changes
         //Will get data from the pro quiz question table
+
+        /*
+         * NO USED
+         * 
         private String getScenarionText(String bigString, int scenarioNum)
         {
             
@@ -364,83 +369,7 @@ namespace CamCan_Service
             {
                 return "No Scenario Text Found";
             }
-        }
-
-        //Returns the nth question for a scenario
-        private Question getQuestion(String bigString, String ans, int questionNum)
-        {
-            //Question Object to be returned by method
-            Question retQuest = new Question();
-
-            int start,end,length;
-
-            String[] answers = new String[4];
-
-            //Check if bigString contains the question number
-            if(bigString.ToUpper().Contains(questionNum + "."))
-            {
-                
-                //Get Question text----
-                start = bigString.ToUpper().IndexOf(questionNum + ".");
-
-                //Find end (Assume first answer will start with "a)")
-                end = bigString.ToUpper().IndexOf("?");
-                length = end - start +1;
-
-                //Set the question text
-                retQuest.questionText = bigString.Substring(start, length).Trim();
-                
-                /*
-                //get answers a) - d)
-                start = bigString.ToUpper().IndexOf("a)");
-
-                //Till start of next question ("b)")
-                end = bigString.ToUpper().IndexOf("b)");
-                length = end - start;
-
-                //Set as firt answer
-                retQuest.ansA = bigString.Substring(start, length).Trim();
-
-                //Repeat for next 3 answers ----
-
-                //Question b
-                start = bigString.ToUpper().IndexOf("b)");
-                end = bigString.ToUpper().IndexOf("c)");
-                length = end - start;
-                retQuest.ansB = bigString.Substring(start, length).Trim();
-
-                //question c
-                start = bigString.ToUpper().IndexOf("c)");
-                end = bigString.ToUpper().IndexOf("d)");
-                length = end - start;
-                retQuest.ansC = bigString.Substring(start, length).Trim();
-
-                //question c
-                start = bigString.ToUpper().IndexOf("d)");
-                end = bigString.ToUpper().IndexOf("?");
-                length = end - start;
-                retQuest.ansC = bigString.Substring(start, length).Trim(); */
-
-                //Get answers
-                answers = getAnswers(ans);
-
-                //store in question
-                retQuest.ansA = answers[0];
-                retQuest.ansB = answers[1];
-                retQuest.ansC = answers[2];
-                retQuest.ansD = answers[3];
-
-                return retQuest;
-            
-            }
-            //Return a question with no data
-            else
-            {
-                retQuest.questionText = "Cannot Find Question";
-                return retQuest;
-            }
-        }
-
+        } */
 
 
         /// <summary>

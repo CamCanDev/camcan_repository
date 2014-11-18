@@ -10,6 +10,7 @@ namespace CamCan_Service
         public String name;
         public String password;
         public int completed;
+        public int id;
 
         public String _name{ get; set; }
         public String _password { get; set; }
