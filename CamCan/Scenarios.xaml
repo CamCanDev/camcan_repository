@@ -33,7 +33,7 @@
             <Button Content="Scenario 3" Height="100" HorizontalAlignment="Left" Margin="0,301,0,0" Name="btnScn3" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn3_Click" />
             <Button Content="Scenario 4" Height="100" HorizontalAlignment="Left" Margin="238,301,0,0" Name="btnScn4" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn4_Click" />
             <Button Content="Scenario 5" Height="100" HorizontalAlignment="Left" Margin="0,407,0,0" Name="btnScn5" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn5_Click" />
-            <Button Content="Scenario 6" Height="100" HorizontalAlignment="Left" Margin="238,407,0,0" Name="btnScn6" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn6_Click" />
+            <Button Content="Scenario 6" Height="100" HorizontalAlignment="Left" Margin="238,407,0,0" Name="btnScn6" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" Click="btnScn6_Click" BorderBrush="Gray"></Button>
             <Button Content="Scenario 7" Height="100" HorizontalAlignment="Left" Margin="0,513,0,0" Name="btnScn7" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn7_Click" />
             <Button Content="Scenario 8" Height="100" HorizontalAlignment="Left" Margin="238,513,0,0" Name="btnScn8" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn8_Click" />
             <Button Content="Scenario 9" Height="100" HorizontalAlignment="Left" Margin="0,619,0,0" Name="btnScn9" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn9_Click" />
@@ -45,11 +45,12 @@
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
-    <phone:PhoneApplicationPage.ApplicationBar>
+   <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.99">
-            <shell:ApplicationBarIconButton IconUri="/Images/info.png" Text="Text" Click="ApplicationBarIconButton_Info_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Text" Click="ApplicationBarIconButton_Help_Click"/>
-            <!--<shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/Images/info.png" Text="Text" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Text" Click="ApplicationBarIconButton_Click_1"/>
+
+       <!--     <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
             </shell:ApplicationBar.MenuItems>-->
