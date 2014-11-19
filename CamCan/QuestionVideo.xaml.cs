@@ -21,7 +21,7 @@ namespace CamCan
         }
         private void ApplicationBarIconButton_Back(object sender, EventArgs e)
         {
-            this.NavigationService.GoBack();
+            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
         private void ApplicationBarIconButton_Forward(object sender, EventArgs e)
         {
@@ -38,23 +38,23 @@ namespace CamCan
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //video code set in xaml
+            mediaElement1.Source = new Uri(Scenarios.scen.videoLink, UriKind.Relative);
+            tbScenario.Text = Scenarios.scen.sID.ToString();
         }
 
-        private void mediaElement2_MediaOpened(object sender, RoutedEventArgs e)
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btPlay_Click(object sender, RoutedEventArgs e)
-        {
-            mediaElement1.Play();   //DD
+            mediaElement1.Play();
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
-            mediaElement1.Pause();  //CH
+            mediaElement1.Pause();
         }
 
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement1.Stop();
+        }
     }
 }

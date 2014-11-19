@@ -31,21 +31,21 @@ namespace CamCan
             password = txtPass.Text;
 
             //WebService connection
-            //Service1Client camcanService = new Service1Client();
-            //camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
-            //camcanService.returnUserAsync(user.getUsername(), password);
+            Service1Client camcanService = new Service1Client();
+            camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
+            camcanService.returnUserAsync(user.getUsername(), password);
 
             //Function to test the application without connection on the webservice(G.D)
-            user.testUser();
-            this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
+            //user.testUser();
+            //this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
 
         //this is the event handler which is called when the event is triggered
         void camcanService_returnUserProfileCompleted(object sender, returnUserCompletedEventArgs e)
         {
-            //adds the information returned in the User class
-            user.setUsername(e.Result.name);
-            user.setCompleted(e.Result.completed);
+            //-1 user not exist / -99 exception databaseS 
+            //user.setUsername(e.Result.name);
+            //user.setCompleted(e.Result.completed);
             try
             {
                 if (user.getUsername().Equals("Empty"))
