@@ -11,7 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -23,9 +23,10 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <Button Content="Play" Height="90" HorizontalAlignment="Left" Margin="6,605,0,0" Name="btPlay" VerticalAlignment="Top" Width="140" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" Click="btPlay_Click" />
-            <Button BorderBrush="DarkRed" Content="Pause" FontSize="32" Foreground="DarkRed" HorizontalAlignment="Left" Margin="334,605,0,73" Name="btnPause" Width="140" Height="90" Click="btnPause_Click" />
-            <MediaElement Height="392" HorizontalAlignment="Left" Margin="6,221,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="468" Source="Videos\ROUGH FOR APP TESTING_WEB - Cellular.m4v" AutoPlay="False" Stretch="Uniform"/>
+            <Button Content="Play" Height="90" HorizontalAlignment="Left" Margin="6,605,0,0" Name="btPlay" VerticalAlignment="Top" Width="140" Foreground="DarkRed" FontSize="32" BorderBrush="DarkRed" Click="btnPlay_Click" />
+            <Button BorderBrush="DarkRed" Content="Pause" FontSize="32" Foreground="DarkRed" HorizontalAlignment="Left" Margin="173,605,0,73" Name="btnPause" Width="140" Height="90" Click="btnPause_Click" />
+            <Button BorderBrush="DarkRed" Content="Stop" FontSize="32" Foreground="DarkRed" HorizontalAlignment="Left" Margin="333,605,0,73" Name="btnStop" Width="140" Height="90" Click="btnStop_Click" />
+            <MediaElement Height="392" HorizontalAlignment="Left" Margin="6,221,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="468" Source="{Binding videoLink}" AutoPlay="False" Stretch="Uniform"/>
         </Grid>
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">

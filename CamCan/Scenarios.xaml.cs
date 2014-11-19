@@ -101,7 +101,7 @@ namespace CamCan
             switch (Login.user.getCompleted())
             {
                 case 0:
-                    btnScn1.SetValue(BorderThicknessProperty, 6);
+                    btnScn1.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn1.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn2.IsHitTestVisible = false;
                     btnScn2.Background = new SolidColorBrush(Colors.Gray);
@@ -124,7 +124,7 @@ namespace CamCan
                     break;
 
                 case 1:
-                    btnScn2.SetValue(BorderThicknessProperty, 6);
+                    btnScn2.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn2.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn3.IsHitTestVisible = false;
                     btnScn3.Background = new SolidColorBrush(Colors.Gray);
@@ -145,7 +145,7 @@ namespace CamCan
                     break;
 
                 case 2:
-                    btnScn3.SetValue(BorderThicknessProperty, 6);
+                    btnScn3.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn3.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn4.IsHitTestVisible = false;
                     btnScn4.Background = new SolidColorBrush(Colors.Gray);
@@ -165,7 +165,7 @@ namespace CamCan
                     break;
 
                 case 3:
-                    btnScn4.SetValue(BorderThicknessProperty, 6);
+                    btnScn4.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn4.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn5.IsHitTestVisible = false;
                     btnScn5.Background = new SolidColorBrush(Colors.Gray);
@@ -182,7 +182,7 @@ namespace CamCan
                     break;
 
                 case 4:
-                    btnScn5.SetValue(BorderThicknessProperty, 6);
+                    btnScn5.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn5.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn6.IsHitTestVisible = false;
                     btnScn6.Background = new SolidColorBrush(Colors.Gray);
@@ -210,7 +210,7 @@ namespace CamCan
                     break;
 
                 case 6:
-                    btnScn7.SetValue(BorderThicknessProperty, 6);
+                    btnScn7.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn7.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn8.IsHitTestVisible = false;
                     btnScn8.Background = new SolidColorBrush(Colors.Gray);
@@ -221,7 +221,7 @@ namespace CamCan
                     break;
                     
                 case 7:
-                    btnScn8.SetValue(BorderThicknessProperty, 6);
+                    btnScn8.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn8.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn9.IsHitTestVisible = false;
                     btnScn9.Background = new SolidColorBrush(Colors.Gray);
@@ -230,14 +230,14 @@ namespace CamCan
                     break;
 
                 case 8:
-                    btnScn9.SetValue(BorderThicknessProperty, 6);
+                    btnScn9.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn9.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     btnScn10.IsHitTestVisible = false;
                     btnScn10.Background = new SolidColorBrush(Colors.Gray);
                     break;
 
                 case 9:
-                    btnScn10.SetValue(BorderThicknessProperty, 6);
+                    btnScn10.SetValue(BorderThicknessProperty, new Thickness(7));
                     btnScn10.SetValue(BorderBrushProperty, new SolidColorBrush(Colors.Black));
                     break;
 
