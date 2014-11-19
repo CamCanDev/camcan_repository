@@ -38,8 +38,7 @@ namespace CamCan
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //Set video link
-            //MediaElement1.videoLink = MainPage.scen.videoLink;
+            //video code set in xaml
         }
 
         private void mediaElement2_MediaOpened(object sender, RoutedEventArgs e)
@@ -49,7 +48,12 @@ namespace CamCan
 
         private void btPlay_Click(object sender, RoutedEventArgs e)
         {
+            mediaElement1.Play();   //DD
+        }
 
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement1.Pause();  //CH
         }
 
     }
