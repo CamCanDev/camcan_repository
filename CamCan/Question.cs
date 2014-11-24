@@ -31,8 +31,11 @@ namespace CamCan
         public string id { get; set; }
         public string questionText { get; set; }
         public string[] answer { get; set; }
-        public int _selectedAnswer;
-        public int selectedAnswer
+        public String selectedAnswer;
+        public String correctAnswer { get; set; }
+
+
+        public String _selectedAnswer
         {
             get { return _selectedAnswer; }
             set
@@ -41,8 +44,6 @@ namespace CamCan
                 PropChanged("selectedAnswer");
             }
         }
-        public int correctAnswer { get; set; }
-
 
         /*
          *  Constructor(s)
@@ -53,7 +54,7 @@ namespace CamCan
             answer = new string[4];
         }
 
-        public Question(string id, string questionText, string[] answer, int correctAnswer)
+        public Question(string id, string questionText, string[] answer, String correctAnswer)
         {
             this.id = id;
             this.questionText = questionText;
@@ -87,7 +88,7 @@ namespace CamCan
             answer[1] = "Answer 2";
             answer[2] = "Answer 3";
             answer[3] = "Answer 4";
-            correctAnswer = 3;
+            correctAnswer = "a) Blah Blah";
 
         }
 

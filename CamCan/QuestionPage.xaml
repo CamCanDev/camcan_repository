@@ -10,11 +10,11 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,29 +22,47 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <TextBlock x:Name="PageTitle" Text="Questions" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+            <Grid Height="26" Background="#B20000">
+                <TextBlock Height="30" Name="user" Text="Username" Margin="261,0,0,-4" />
+                <TextBlock Height="30" Name="tbScenario" Text="Scenario" Margin="0,0,357,-4" />
+                <TextBlock Height="30" Name="tbScenarioID" Text="{Binding id}" Margin="81,0,357,-4" />
+                <TextBlock Name="userID" Text="" Margin="353,0,0,-4" />
+            </Grid>
+            <Grid Background="#B20000">
+                <TextBlock x:Name="PageTitle" Text="Question" Margin="0,10,0,-10" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+            </Grid>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Images/content_background.png" Stretch="UniformToFill" />
-            </Grid.Background>
-            <TextBlock FontFamily="Comic Sans MS" FontSize="25.333" Foreground="Black" Height="106" HorizontalAlignment="Left" Margin="47,81,0,0" Name="textBlock2" Text="{Binding questionText}" VerticalAlignment="Top" Width="382" TextWrapping="Wrap" />
-            <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[0]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,162,0,0" Name="btnScn1" VerticalAlignment="Top" Width="399" />
-            <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[3]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,444,0,0" Name="button2" VerticalAlignment="Top" Width="399" />
-            <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[1]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,349,0,0" Name="button3" VerticalAlignment="Top" Width="399" />
-            <Button Background="#C3000D" BorderBrush="Gray" BorderThickness="3" Content="{Binding answer[2]}" FontFamily="Comic Sans MS" Foreground="White" Height="104" HorizontalAlignment="Left" Margin="47,253,0,0" Name="button4" VerticalAlignment="Top" Width="399" />
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,6,0,0" Background="{x:Null}">
+            <Grid>
+                <TextBlock Height="88" HorizontalAlignment="Right" Margin="0,181,31,0" Name="textBlock1" Text="0" VerticalAlignment="Top" Width="346" Foreground="#FF170D0D" DataContext="{Binding answer[0]}"
+                           TextWrapping="Wrap" />
+                <TextBlock Height="88" HorizontalAlignment="Right" Margin="0,283,26,0" Name="textBlock2" Text="1" VerticalAlignment="Top" Width="346" Foreground="#FF170D0D" DataContext="{Binding answer[1]}"
+                           TextWrapping="Wrap" />
+                <TextBlock Height="88" HorizontalAlignment="Right" Margin="0,398,28,0" Name="textBlock3" Text="2" VerticalAlignment="Top" Width="346" Foreground="#FF170D0D" DataContext="{Binding answer[2]}"
+                           TextWrapping="Wrap" />
+                <TextBlock Height="88" HorizontalAlignment="Right" Margin="0,510,31,0" Name="textBlock4" Text="3" VerticalAlignment="Top" Width="346" Foreground="#FF170D0D" DataContext="{Binding answer[3]}"
+                           TextWrapping="Wrap" />
+                <RadioButton Content="{Binding answer[0]}" Height="72" HorizontalAlignment="Left" Margin="23,177,0,0" Name="radioButton1" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
+                <RadioButton Content="{Binding answer[1]}" Height="72" HorizontalAlignment="Left" Margin="23,286,0,0" Name="radioButton2" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
+                <RadioButton Content="{Binding answer[2]}" Height="72" HorizontalAlignment="Left" Margin="23,400,0,0" Name="radioButton3" VerticalAlignment="Top" Width="76" Background="#BFD42323" />
+                <RadioButton Content="{Binding answer[3]}" Height="72" HorizontalAlignment="Left" Margin="23,0,0,57" Name="radioButton4" VerticalAlignment="Bottom" Width="76" Background="#BFD42323" />
+                <TextBlock FontFamily="Comic Sans MS" FontSize="25.333" Foreground="Black" Height="126" HorizontalAlignment="Left" Margin="23,58,0,0" Name="tbQuestionContent" Text="{Binding questionText}" VerticalAlignment="Top" Width="401" TextWrapping="Wrap" />
+            </Grid>
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
+        </Grid.Background>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
 
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116">
-                <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
-                <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
-                <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
+            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
 
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>

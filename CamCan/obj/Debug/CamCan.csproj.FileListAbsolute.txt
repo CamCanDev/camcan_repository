@@ -1,123 +1,20 @@
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\ApplicationIcon.png
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\Background.png
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.dll
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.pdb
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\App.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.g.resources
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.dll
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.pdb
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\AppManifest.xaml
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.xap
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\XapCacheFile.xml
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\QuestionVideo.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\QuestionText.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\ApplicationIcon.png
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\Background.png
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.dll
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.pdb
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\AppManifest.xaml
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\Bin\Debug\CamCan.xap
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\App.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\QuestionText.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\QuestionVideo.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.g.resources
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.dll
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\CamCan.pdb
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\CamCan\CamCan\obj\Debug\XapCacheFile.xml
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\ApplicationIcon.png
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\Background.png
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.dll
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.pdb
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\App.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Feedback.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Help.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Information.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Login.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\QuestionText.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\QuestionVideo.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Result.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\Scenarios.g.i.cs
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.g.resources
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.dll
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\CamCan.pdb
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\AppManifest.xaml
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\Bin\Debug\CamCan.xap
-E:\Semester_2\Wednesday_1\AssignmentWork\camcan_repository-master\camcan_repository-master\CamCan\CamCan\obj\Debug\XapCacheFile.xml
-E:\Github\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
-E:\Github\camcan_repository\CamCan\Bin\Debug\Background.png
-E:\Github\camcan_repository\CamCan\Bin\Debug\CamCan.dll
-E:\Github\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
-E:\Github\camcan_repository\CamCan\obj\Debug\App.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
-E:\Github\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
-E:\Github\camcan_repository\CamCan\obj\Debug\CamCan.dll
-E:\Github\camcan_repository\CamCan\obj\Debug\CamCan.pdb
-E:\Github\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
-E:\Github\camcan_repository\CamCan\Bin\Debug\CamCan.xap
-E:\Github\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.dll
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
-C:\Users\Ray\Documents\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.dll
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
-E:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\App.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Feedback.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Help.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Information.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Login.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionPage.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionText.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\QuestionVideo.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Scenarios.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.dll
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.pdb
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\ApplicationIcon.png
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\Background.png
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.dll
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.pdb
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\Result.g.i.cs
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\CamCan.g.resources
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\AppManifest.xaml
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\Bin\Debug\CamCan.xap
-H:\Stage 2 Cert_IV_Programming\Mobile_Application\GitHub\camcan_repository\CamCan\obj\Debug\XapCacheFile.xml
+E:\camcan_repository\Backup\CamCan\obj\Debug\App.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Finish.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Help.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Information.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Login.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\QuestionPage.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\QuestionText.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\QuestionVideo.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Result.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\Scenarios.g.i.cs
+E:\camcan_repository\Backup\CamCan\obj\Debug\CamCan.g.resources
+E:\camcan_repository\Backup\CamCan\Bin\Debug\ApplicationIcon.png
+E:\camcan_repository\Backup\CamCan\Bin\Debug\Background.png
+E:\camcan_repository\Backup\CamCan\Bin\Debug\CamCan.dll
+E:\camcan_repository\Backup\CamCan\Bin\Debug\CamCan.pdb
+E:\camcan_repository\Backup\CamCan\obj\Debug\CamCan.dll
+E:\camcan_repository\Backup\CamCan\obj\Debug\CamCan.pdb
+E:\camcan_repository\Backup\CamCan\Bin\Debug\AppManifest.xaml
+E:\camcan_repository\Backup\CamCan\Bin\Debug\CamCan.xap
+E:\camcan_repository\Backup\CamCan\obj\Debug\XapCacheFile.xml

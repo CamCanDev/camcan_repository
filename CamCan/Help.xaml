@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -20,19 +20,24 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
-            <TextBlock x:Name="PageTitle" Text="Help" Margin="0" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
-        </StackPanel>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D"></StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
             <Grid.Background>
-                <ImageBrush ImageSource="/Images/content_background.png" Stretch="UniformToFill" />
+                <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
-            <TextBlock Height="453" HorizontalAlignment="Left" Margin="6,79,0,0" Name="textBlock" Text="    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." VerticalAlignment="Top" Width="468" Foreground="Black" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="25" />
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
-
+            <TextBlock FontFamily="Arial" FontSize="55" Margin="210,84,129,577" Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Text="Help" TextAlignment="Center" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="65" HorizontalAlignment="Left" Margin="76,325,0,0" Name="textBlock2" Text="Select a scenario you want to answer" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="65" HorizontalAlignment="Left" Margin="76,437,0,0" Name="textBlock1" Text="Read and understand the written scenario" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="Black" Height="94" HorizontalAlignment="Left" Margin="76,549,0,0" Name="textBlock3" Text="Proceed to the next page and answer the following questions" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,284,0,0" Name="textBlock4" Text="Step 1" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,396,0,0" Name="textBlock5" Text="Step 2" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="76,508,0,0" Name="textBlock6" Text="Step 3" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" />
+            <Image Height="140" HorizontalAlignment="Left" Margin="41,84,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="163" Source="/CamCan;component/Images/logo_camcan.png" />
         </Grid>
     </Grid>
 

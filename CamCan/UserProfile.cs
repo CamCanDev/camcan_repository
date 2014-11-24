@@ -13,29 +13,30 @@ namespace CamCan
 {
     public class UserProfile
     {
-        private String username;
-        private String password;
-        private Scenarios[] scenarioList;
-        private int completed;
+        private String username { get; set; }
+        private int completed { get; set; }
 
-        public String setPassword
-        { 
-            set { password = value;}
+        public void setUsername(String username){
+             this.username = username;
         }
 
-         public String setUsername 
-         {
-             set { username = value; }
-         }
-
-        public String getUsername
-        {
-            get { return username; }
+        public String getUsername(){
+            return username;
         }
 
-        public int getCompleted
+        public void setCompleted(int completed){
+             this.completed = completed;
+        }
+
+        public int getCompleted(){
+            return completed;
+        }
+
+        public void testUser()
         {
-            get { return completed; }
+            username = "Admin test";
+            completed = 5;
+
         }
     }
 }

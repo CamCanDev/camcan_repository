@@ -10,68 +10,61 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
-
+using CamCan.CamCanService;
+using Microsoft.Phone.Shell;
+//WORKS NK 21/11
 namespace CamCan
 {
     public partial class Login : PhoneApplicationPage
     {
-        public String user = "1";
-        public String pass = "1";
-
+        static public UserProfile user = new UserProfile();
+        String password;
 
         public Login()
         {
             InitializeComponent();
         }
-
-
-
-        private void button1_Click(object sender, RoutedEventArgs e)
+        //works NK 21/11
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            // if user name and password correct then enter the application
-            if ((txtUser.Text == user) && (txtPass.Text == pass))
+            user.setUsername(txtUser.Text);
+            password = txtPass.Text;
+
+            //WebService connection
+            Service1Client camcanService = new Service1Client();
+            camcanService.returnUserCompleted += new EventHandler<returnUserCompletedEventArgs>(camcanService_returnUserProfileCompleted);
+            camcanService.returnUserAsync(user.getUsername(), password);
+
+            //Function to test the application without connection on the webservice(G.D)
+            //user.testUser();
+            //this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
+        }
+
+        //Works NK 21/11
+        //this is the event handler which is called when the event is triggered
+        void camcanService_returnUserProfileCompleted(object sender, returnUserCompletedEventArgs e)
+        {
+            user.setUsername(user.getUsername());
+            user.setCompleted(Convert.ToInt32(e.Result));        
+            try
             {
-                txtUser.Text = "";
-                txtPass.Text = "";
-                this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
-
+                if (e.Result.Equals(-99))
+                    {
+                    MessageBox.Show("Username or/and Password is invalid, please try again");
+                    }
+                else if (e.Result.Equals(-100))
+                        {
+                        MessageBox.Show("Please check Internet connections");
+                        }
+                else
+                    {
+                    this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
+                    }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Invalid Entry! ");
+                MessageBox.Show("Database exception!");
             }
-        }
-
-        private void txtUser_Tap(object sender, GestureEventArgs e)
-        {
-            txtUser.Text = "";
-        }
-
-        private void txtPass_Tap(object sender, GestureEventArgs e)
-        {
-            txtPass.Text = "";
-        }
-
-        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            UserProfile user1= new UserProfile();
-            user1.setUsername = "1";
-            user1.setPassword = "1";
-        }
-
-        private void btnInfo_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Uri("/Information.xaml", UriKind.Relative));
-        }
-
-        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtPass_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
     }
