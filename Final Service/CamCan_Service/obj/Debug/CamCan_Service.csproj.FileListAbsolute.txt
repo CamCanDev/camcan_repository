@@ -1,0 +1,39 @@
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+E:\myClasses\Semester Two\Develop Mobile Apps\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+F:\Material\Web Services\CamCan\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll.config
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.dll
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\bin\CamCan_Service.pdb
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+C:\Users\041401076\Downloads\CamCan_Service\CamCan_Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+E:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.dll
+E:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.pdb
+E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll.config
+E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll
+E:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.pdb
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.dll
+E:\121114\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.pdb
+E:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+G:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache
+G:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.dll
+G:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll.config
+G:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.dll
+G:\GitHub\camcan_repository\cam\CamCan_Service\bin\CamCan_Service.pdb
+G:\GitHub\camcan_repository\cam\CamCan_Service\obj\Debug\CamCan_Service.pdb
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\bin\CamCan_Service.dll.config
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\bin\CamCan_Service.dll
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\bin\CamCan_Service.pdb
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\obj\Debug\CamCan_Service.dll
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\obj\Debug\CamCan_Service.pdb
+C:\Users\NicholaKerr\Documents\GitHub\latest Service\CamCan_Service\obj\Debug\CamCan_Service.csprojResolveAssemblyReference.cache

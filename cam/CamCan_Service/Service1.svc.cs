@@ -18,7 +18,6 @@ namespace CamCan_Service
     public class Service1 : IService1
     {
         
-        // 
         [WebMethod]
         public UserProfile returnUser(String user, String pass)
         {
@@ -26,12 +25,7 @@ namespace CamCan_Service
 
             using (MySqlConnection cnn = new MySqlConnection(conString))
             {
-
                 cnn.Open();
-
-                // Convert password to MD5
-                //mD5Password = CalculateMD5Hash(pass);
-
                 String sql = String.Format("SELECT ID FROM dgn6la8u0_users WHERE user_login = \"{0}\" and user_pass = \"{1}\"", user, pass);
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, cnn);
                 DataSet ds = new DataSet();
@@ -39,7 +33,6 @@ namespace CamCan_Service
                 UserProfile u = new UserProfile();
                 try
                 {
-
                     //Returns empty strings if user does not exist
                     if (ds.Tables.Count == 0)
                     {
@@ -179,8 +172,6 @@ namespace CamCan_Service
                             max= compare;
                         }
                     }
-                 
-
             }
             return max;      
                                  
