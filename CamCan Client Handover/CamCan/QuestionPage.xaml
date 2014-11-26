@@ -1,0 +1,164 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CamCan.QuestionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+            <Grid Height="26" Background="#B20000">
+                <TextBlock Height="30" Name="user" Text="Username" Margin="261,0,0,-4" />
+                <TextBlock Height="30" Name="tbScenario" Text="Scenario" Margin="0,0,357,-4" />
+                <TextBlock Height="30" Name="tbScenarioID" Text="{Binding id}" Margin="81,0,357,-4" />
+                <TextBlock Name="userID" Text="" Margin="353,0,0,-4" />
+            </Grid>
+            <Grid Background="#B20000">
+                <TextBlock x:Name="PageTitle" Text="Question" Margin="0,8,0,-8" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" />
+            </Grid>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,6,0,0" Background="{x:Null}">
+            <ScrollViewer Height="617"
+                          HorizontalAlignment="Left"
+                          Margin="8,41,0,0"
+                          Name="svQuestion"
+                          VerticalAlignment="Top"
+                          Width="466"
+                          Foreground="#FF0A0A0A">
+
+
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="270*" />
+                        <RowDefinition Height="198*" />
+                        <RowDefinition Height="149*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Height="88"
+                               HorizontalAlignment="Right"
+                               Margin="0,115,4,0"
+                               Name="textBlock1"
+                               Text="0"
+                               VerticalAlignment="Top"
+                               Width="377"
+                               Foreground="#FF170D0D"
+                               DataContext="{Binding answer[0]}"
+                               TextWrapping="Wrap"
+                               FontSize="16" />
+                    <TextBlock Height="88"
+                               HorizontalAlignment="Right"
+                               Margin="0,211,4,0"
+                               Name="textBlock2"
+                               Text="1"
+                               VerticalAlignment="Top"
+                               Width="372"
+                               Foreground="#FF170D0D"
+                               DataContext="{Binding answer[1]}"
+                               TextWrapping="Wrap"
+                               FontSize="16" />
+                    <TextBlock Height="88"
+                               HorizontalAlignment="Right"
+                               Margin="0,313,4,0"
+                               Name="textBlock3"
+                               Text="2"
+                               VerticalAlignment="Top"
+                               Width="374"
+                               Foreground="#FF170D0D"
+                               DataContext="{Binding answer[2]}"
+                               TextWrapping="Wrap"
+                               FontSize="16" />
+                    <TextBlock Height="98"
+                               HorizontalAlignment="Right"
+                               Margin="0,413,4,0"
+                               Name="textBlock4"
+                               Text="3"
+                               VerticalAlignment="Top"
+                               Width="377"
+                               Foreground="#FF170D0D"
+                               DataContext="{Binding answer[3]}"
+                               TextWrapping="Wrap"
+                               FontSize="16"
+                               Grid.RowSpan="2" />
+                    <RadioButton Content="{Binding answer[0]}"
+                                 Height="72"
+                                 HorizontalAlignment="Left"
+                                 Margin="4,115,0,0"
+                                 Name="radioButton1"
+                                 VerticalAlignment="Top"
+                                 Width="76"
+                                 Background="#BFD42323"
+                                 BorderBrush="#BFEBE5E5" />
+                    <RadioButton Content="{Binding answer[1]}"
+                                 Height="72"
+                                 HorizontalAlignment="Left"
+                                 Margin="4,211,0,0"
+                                 Name="radioButton2"
+                                 VerticalAlignment="Top"
+                                 Width="76"
+                                 Background="#BFD42323" />
+                    <RadioButton Content="{Binding answer[2]}"
+                                 Height="72"
+                                 HorizontalAlignment="Left"
+                                 Margin="4,311,0,0"
+                                 Name="radioButton3"
+                                 VerticalAlignment="Top"
+                                 Width="76"
+                                 Background="#BFD42323" />
+                    <RadioButton Content="{Binding answer[3]}"
+                                 Height="72"
+                                 HorizontalAlignment="Left"
+                                 Margin="4,0,0,68"
+                                 Name="radioButton4"
+                                 VerticalAlignment="Bottom"
+                                 Width="76"
+                                 Background="#BFD42323"
+                                 Grid.RowSpan="2" />
+                    <TextBlock FontFamily="Comic Sans MS"
+                               FontSize="20"
+                               Foreground="Black"
+                               Height="108"
+                               HorizontalAlignment="Left"
+                               Name="tbQuestionContent"
+                               Text="{Binding questionText}"
+                               VerticalAlignment="Top"
+                               Width="462"
+                               TextWrapping="Wrap" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
+        </Grid.Background>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
+            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CamCan.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
+            </Grid.Background>
+            
+            <ScrollViewer Height="457" HorizontalAlignment="Left"
+                          Margin="8,201,0,0" Name="svText" VerticalAlignment="Top" Width="466" Foreground="#FF0A0A0A" >
+                <TextBlock MinWidth="100" HorizontalAlignment="Stretch" Name="tbScenText" Text="{Binding Text}" VerticalAlignment="Stretch" Width="{Binding ElementName= svText}" Foreground="#FF0A0A0A" FontFamily="Comic Sans MS" FontSize="25" TextWrapping="Wrap" />
+            </ScrollViewer>
+        </Grid>
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D">
+            <Grid Background="#B20000" Height="131">
+                <TextBlock x:Name="Scenario" Text="Scenario" Margin="55,35,150,6" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" />
+                <TextBlock x:Name="tbScenario" Text="{Binding ID}" Margin="336,35,38,-4" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Left" Height="100" />
+            </Grid>
+        </StackPanel>
+        <!--ContentPanel - place additional content here-->
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFB21116" Opacity="0.99">
+            <shell:ApplicationBarIconButton IconUri="/Images/back.png" Text="Back" Click="ApplicationBarIconButton_Back"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/next.png" Text="Next" Click="ApplicationBarIconButton_Forward"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/change_video.png" Text="Video" Click="ApplicationBarIconButton_Video"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Help"/>
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

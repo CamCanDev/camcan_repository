@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CamCan.Scenarios"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0" Background="#C3000D"></StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
+            </Grid.Background>
+            <Button Content="Scenario 1" Height="100" HorizontalAlignment="Left" Margin="0,196,0,0" Name="btnScn1" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn1_Click" />
+            <Button Content="Scenario 2" Height="100" HorizontalAlignment="Right" Margin="0,196,6,0" Name="btnScn2" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn2_Click" />
+            <Button Content="Scenario 3" Height="100" HorizontalAlignment="Left" Margin="0,291,0,0" Name="btnScn3" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn3_Click" />
+            <Button Content="Scenario 4" Height="100" HorizontalAlignment="Left" Margin="238,291,0,0" Name="btnScn4" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn4_Click" />
+            <Button Content="Scenario 5" Height="100" HorizontalAlignment="Left" Margin="0,389,0,0" Name="btnScn5" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn5_Click" />
+            <Button Content="Scenario 6" Height="100" HorizontalAlignment="Left" Margin="238,389,0,0" Name="btnScn6" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" Click="btnScn6_Click" BorderBrush="Gray"></Button>
+            <Button Content="Scenario 7" Height="100" HorizontalAlignment="Left" Margin="0,488,0,0" Name="btnScn7" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn7_Click" />
+            <Button Content="Scenario 8" Height="100" HorizontalAlignment="Left" Margin="238,488,0,0" Name="btnScn8" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn8_Click" />
+            <Button Content="Scenario 9" Height="100" HorizontalAlignment="Left" Margin="0,587,0,0" Name="btnScn9" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn9_Click" />
+            <Button Content="Scenario 10" Height="100" HorizontalAlignment="Left" Margin="238,587,0,0" Name="btnScn10" VerticalAlignment="Top" Width="236" BorderThickness="3" Background="#FFB20000" Foreground="White" FontFamily="Comic Sans MS" BorderBrush="Gray" Click="btnScn10_Click" />
+            <TextBlock x:Name="Scenario" Text="Scenarios" Margin="6,35,6,639" Style="{StaticResource PhoneTextTitle1Style}" TextAlignment="Center" Height="94" />
+        </Grid>
+        
+        
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+   <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.99" BackgroundColor="#FFB20000">
+            <shell:ApplicationBarIconButton IconUri="/Images/info.png" Text="Info" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/help.png" Text="Help" Click="ApplicationBarIconButton_Click_1"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
+
