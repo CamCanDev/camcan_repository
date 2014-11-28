@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 
+//these are the scenario getters and setters
 namespace CamCan
 {
     public class Scenario
@@ -29,7 +30,7 @@ namespace CamCan
         public void testScenario()
         {
             text = "Text scenario teste ";
-            videoLink = "/Videos/ROUGH FOR APP TESTING_WEB - Cellular.mp4";
+            videoLink = "/Videos/ROUGH FOR APP TESTING_WEB - Cellular.mp4"; // this is the link to the video (KM)
             Question quest = new Question();
             quest.testQuestion();
             questions.Add(quest);

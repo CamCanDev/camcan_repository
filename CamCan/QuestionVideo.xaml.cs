@@ -43,17 +43,17 @@ namespace CamCan
             tbScenario.Text = Scenarios.scen.sID.ToString();
         }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        private void btnPlay_Click(object sender, RoutedEventArgs e) // This button click section allows the user to play the video (CH)
         {
             mediaElement1.Play();
         }
 
-        private void btnPause_Click(object sender, RoutedEventArgs e)
+        private void btnPause_Click(object sender, RoutedEventArgs e)// This button click section allows the user to pause the video (CH)
         {
             mediaElement1.Pause();
         }
 
-        private void btnStop_Click(object sender, RoutedEventArgs e)
+        private void btnStop_Click(object sender, RoutedEventArgs e)// This button click section allows the user to stop the video (CH)
         {
             mediaElement1.Stop();
         }
