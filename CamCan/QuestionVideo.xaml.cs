@@ -19,9 +19,10 @@ namespace CamCan
         {
             InitializeComponent();
         }
+
         private void ApplicationBarIconButton_Back(object sender, EventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("/Scenarios.xaml", UriKind.Relative));
         }
         private void ApplicationBarIconButton_Forward(object sender, EventArgs e)
         {

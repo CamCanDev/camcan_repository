@@ -25,14 +25,14 @@ namespace CamCan
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {            
             //WebService connection
-            //Service1Client camcanService = new Service1Client();
-            //camcanService.returnScenarioCompleted += new EventHandler<returnScenarioCompletedEventArgs>(camcanService_returnScenarioCompleted);
-            //camcanService.returnScenarioAsync(scen.sID);
+            Service1Client camcanService = new Service1Client();            
+            camcanService.returnScenarioCompleted += new EventHandler<returnScenarioCompletedEventArgs>(camcanService_returnScenarioCompleted);
+            camcanService.returnScenarioAsync(Scenarios.scen.sID);
 
             //Function to test the application without connection on the webservice(G.D)
-            Scenarios.scen.testScenario();
-            tbScenText.Text = Scenarios.scen.text;
-            tbScenario.Text = Scenarios.scen.sID.ToString();
+            //Scenarios.scen.testScenario();
+            //tbScenText.Text = Scenarios.scen.text;
+            //tbScenario.Text = Scenarios.scen.sID.ToString();
 
         }
 
@@ -41,11 +41,32 @@ namespace CamCan
         {
             //adds the information returned in the User class (R.A.)
 
-            Scenarios.scen.sID = e.Result._scenarioID;
-            Scenarios.scen.text = e.Result._scenarioInformation;
-            Scenarios.scen.videoLink = e.Result._videoLink;
-            //scen.questions = e.Result.questionArray; This isn't working yet (R.A.)
-            tbScenText.Text = Scenarios.scen.text;
+            //MessageBox.Show(e.Result._text);
+            Scenarios.scen.text = e.Result._text;
+            //Scenarios.scen.videoLink = e.Result._videoLink;
+            try
+                {
+
+                //get questions
+                for (int i = 0; i < 4; i++)
+                {
+                    Question q = new Question();
+                    
+                    q.id = Convert.ToString(e.Result._questions[i]._id);
+                    q.questionText = e.Result._questions[i]._questionText.Replace("\t", " ");
+                    q.correctAnswer = e.Result._questions[i]._correctAns;
+                    q.answer[0] = e.Result._questions[i]._ansA;
+                    q.answer[1] = e.Result._questions[i]._ansB;
+                    q.answer[2] = e.Result._questions[i]._ansC;
+                    q.answer[3] = e.Result._questions[i]._ansD;
+                    //add to scenario obj
+                    Scenarios.scen.questions.Add(q);
+                }
+            }catch (Exception ex){
+                MessageBox.Show(ex.ToString());
+            }
+            
+            tbScenText.Text = Scenarios.scen.text.ToString();
             tbScenario.Text = Scenarios.scen.sID.ToString();
         }
 

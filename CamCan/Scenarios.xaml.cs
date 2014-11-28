@@ -17,6 +17,7 @@ namespace CamCan
     {
         static public Scenario scen = new Scenario();
         
+        
         public Scenarios()
         {
             InitializeComponent();
@@ -25,61 +26,71 @@ namespace CamCan
         //Click events for scenario selection. Navigates to question page and parses the id for the chosen scenario (R.A.)
         private void btnScn1_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 1;
+            scen._sID = 1;
+            scen._videoLink = "/Videos/Scenario 1_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml" , UriKind.Relative));
         }
 
         private void btnScn2_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 2;
+            scen._sID = 2;
+            scen._videoLink = "/Videos/Scenario 2_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn3_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 3;
+            scen._sID = 3;
+            scen._videoLink = "/Videos/Scenario 3_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn4_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 4;
+        scen._sID = 4;
+        scen._videoLink = "/Videos/Scenario 4_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn5_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 5;
+        scen._sID = 5;
+        scen._videoLink = "/Videos/Scenario 5_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn6_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 6;
+        scen._sID = 6;
+        scen._videoLink = "/Videos/Scenario 6_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn7_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 7;
+        scen._sID = 7;
+        scen._videoLink = "/Videos/Scenario 7_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn8_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 8;
+        scen._sID = 8;
+        scen._videoLink = "/Videos/Scenario 8_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn9_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 9;
+        scen._sID = 9;
+        scen._videoLink = "/Videos/Scenario 9_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
         private void btnScn10_Click(object sender, RoutedEventArgs e)
         {
-            scen.sID = 10;
+        scen._sID = 10;
+        scen._videoLink = "/Videos/Scenario 10_MOBILE.mp4";
             this.NavigationService.Navigate(new Uri("/QuestionText.xaml", UriKind.Relative));
         }
 
@@ -98,7 +109,7 @@ namespace CamCan
         //On page load the buttons are set up depending on how many scenarios the user has completed (R.A.)
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            switch (Login.user.getCompleted())
+            switch (Login.user._completed)
             {
                 case 0:
                     btnScn1.SetValue(BorderThicknessProperty, new Thickness(7));
