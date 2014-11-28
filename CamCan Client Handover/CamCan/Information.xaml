@@ -29,13 +29,79 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/CamCan;component/Images/newBackground.fw.png" />
             </Grid.Background>
+            
             <Button Content="Back" Height="72" HorizontalAlignment="Left" Margin="160,0,0,10" Name="btnBack" VerticalAlignment="Bottom" Width="160" Background="#FFC3000D" Click="btnBack_Click" BorderBrush="Gray" />
-            <TextBlock FontFamily="Arial" FontSize="55" Margin="207,84,6,0" Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Text="About Us" TextAlignment="Center" Height="96" VerticalAlignment="Top" />
-            <TextBlock FlowDirection="LeftToRight" FontFamily="Arial" FontSize="22" Foreground="Black" Height="156" HorizontalAlignment="Left" Margin="42,295,0,0" Name="textBlock2" Text="CAM CAN is a family led organisation providing individualised, tailored community based support to people who are vulnerable and their families who want to live their lives in the community.   " TextWrapping="Wrap" VerticalAlignment="Top" Width="395" />
-            <TextBlock FlowDirection="LeftToRight" FontFamily="Arial" FontSize="22" Foreground="Black" Height="187" HorizontalAlignment="Left" Margin="42,498,0,0" Name="textBlock1" Text="CAM CAN is an organisation that provides individually tailored support to vulnerable people and their families/carers. CAM CAN was founded by Marc and Anthea Lema in response to people asking for greater flexibility and control over their resources and in their lives." TextWrapping="Wrap" VerticalAlignment="Top" Width="395" />
-            <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="42,254,0,0" Name="textBlock4" Text="Who we are" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" />
-            <TextBlock FontFamily="Arial" FontSize="24" Foreground="#FFB20000" Height="35" HorizontalAlignment="Left" Margin="42,457,0,0" Name="textBlock3" Text="What we do" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" />
-            <Image Height="140" HorizontalAlignment="Left" Margin="41,84,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="163" Source="/CamCan;component/Images/logo_camcan.png" />
+           <TextBlock FontFamily="Arial"
+                               FontSize="55"
+                               Name="PageTitle"
+                               Style="{StaticResource PhoneTextTitle1Style}"
+                               Text="About Us"
+                               TextAlignment="Center"
+                               Height="100" />
+            <ScrollViewer Height="487" HorizontalAlignment="Left" Margin="8,193,0,0" Name="svAbout" VerticalAlignment="Top" Width="466" Foreground="#FF0A0A0A">
+                <StackPanel>
+                    <TextBlock FontFamily="Arial"
+                               FontSize="24"
+                               Foreground="#FFB20000"
+                               Height="35"
+                               Name="textBlock4"
+                               Text="Who we are"
+                               TextWrapping="Wrap"
+                               Width="145" />
+                    <TextBlock FlowDirection="LeftToRight"
+                               FontFamily="Arial"
+                               FontSize="22"
+                               Foreground="Black"
+                               Height="156"
+                               Name="textBlock2"
+                               Text="CAM CAN is a family led organisation providing individualised, tailored community based support to people who are vulnerable and their families who want to live their lives in the community.   "
+                               TextWrapping="Wrap"
+                               Width="430" />
+                    <TextBlock FontFamily="Arial"
+                               FontSize="24"
+                               Foreground="#FFB20000"
+                               Height="35"
+                               Name="textBlock3"
+                               Text="What we do"
+                               TextWrapping="Wrap"
+                               Width="145" />
+                    <TextBlock FlowDirection="LeftToRight"
+                               FontFamily="Arial"
+                               FontSize="22"
+                               Foreground="Black"
+                               Height="187"
+                               Name="textBlock1"
+                               Text="CAM CAN is an organisation that provides individually tailored support to vulnerable people and their families/carers. CAM CAN was founded by Marc and Anthea Lema in response to people asking for greater flexibility and control over their resources and in their lives."
+                               TextWrapping="Wrap"
+                               Width="430" />
+                    <TextBlock FontFamily="Arial"
+                               FontSize="24"
+                               Foreground="#FFB20000"
+                               Height="35"
+                               Name="textBlockNK"
+                               Text="Who helped us"
+                               TextWrapping="Wrap"
+                               Width="145" />
+                    <TextBlock FlowDirection="LeftToRight"
+                               FontFamily="Arial"
+                               FontSize="22"
+                               Foreground="Black"
+                               Height="187"
+                               Name="textBlockCentral"
+                               Text="CAM CAN app was created by Central Institute of Technology Programming Students (J. McNeil, G. Dias, R. Arrowsmith, J. Coombs, D. Dowd, T. Fletcher, C.Haine, J. Huang, J.Osbourne, M.Panicciari, B. Qi, and Managed By N.Kerr Programming lecturer."
+                               TextWrapping="Wrap"
+                               Width="430" />
+                </StackPanel>
+                
+            </ScrollViewer>
+            <Image Height="144"
+                           HorizontalAlignment="Left"
+                           Name="image1"
+                           Stretch="Fill"
+                           VerticalAlignment="Top"
+                           Width="156"
+                           Source="/CamCan;component/Images/logo_camcan.png"
+                   Margin="8,6,0,0" />
         </Grid>
     </Grid>
 

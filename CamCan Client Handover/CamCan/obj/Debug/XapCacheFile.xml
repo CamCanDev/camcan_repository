@@ -1,21 +1,18 @@
-﻿<xapCache source="E:\CamCanFinal\CamCan\Bin\Debug\CamCan.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="25/11/2014 14:32:18">
-  <file source="E:\CamCanFinal\CamCan\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="25/11/2014 14:09:32" />
-  <file source="E:\CamCanFinal\CamCan\Background.png" archivePath="Background.png" lastWriteTime="19/11/2014 11:27:48" />
-  <file source="E:\CamCanFinal\CamCan\CamCanIcons.jpg" archivePath="CamCanIcons.jpg" lastWriteTime="25/11/2014 14:11:20" />
-  <file source="E:\CamCanFinal\CamCan\obj\Debug\CamCan.dll" archivePath="CamCan.dll" lastWriteTime="25/11/2014 14:32:14" />
-  <file source="E:\CamCanFinal\CamCan\Videos\ROUGH_FOR_APP_TESTING_WEB-Cellular.m4v" archivePath="Videos\ROUGH_FOR_APP_TESTING_WEB-Cellular.m4v" lastWriteTime="19/11/2014 11:36:12" />
-  <file source="E:\CamCanFinal\CamCan\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="19/11/2014 11:28:04" />
-  <file source="E:\CamCanFinal\CamCan\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19/11/2014 11:27:46" />
-  <file source="E:\CamCanFinal\CamCan\Images\back.png" archivePath="Images\back.png" lastWriteTime="19/11/2014 11:27:56" />
-  <file source="E:\CamCanFinal\CamCan\Images\change_text.png" archivePath="Images\change_text.png" lastWriteTime="19/11/2014 11:27:56" />
-  <file source="E:\CamCanFinal\CamCan\Images\change_video.png" archivePath="Images\change_video.png" lastWriteTime="19/11/2014 11:27:56" />
-  <file source="E:\CamCanFinal\CamCan\Images\help.png" archivePath="Images\help.png" lastWriteTime="19/11/2014 11:27:58" />
-  <file source="E:\CamCanFinal\CamCan\Images\info.png" archivePath="Images\info.png" lastWriteTime="19/11/2014 11:27:58" />
-  <file source="E:\CamCanFinal\CamCan\Images\login.png" archivePath="Images\login.png" lastWriteTime="19/11/2014 11:27:58" />
-  <file source="E:\CamCanFinal\CamCan\Images\next.png" archivePath="Images\next.png" lastWriteTime="19/11/2014 11:27:58" />
-  <file source="E:\CamCanFinal\CamCan\Images\video-placeholder-large.jpg" archivePath="Images\video-placeholder-large.jpg" lastWriteTime="19/11/2014 11:27:58" />
-  <file source="E:\CamCanFinal\CamCan\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="19/11/2014 11:28:04" />
-  <file source="E:\CamCanFinal\CamCan\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="25/11/2014 14:34:26" />
-  <file source="E:\CamCanFinal\CamCan\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19/11/2014 11:27:46" />
-  <file source="E:\CamCanFinal\CamCan\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="19/11/2014 11:27:48" />
+﻿<xapCache source="F:\CamCanFinal\Backup\CamCan\Bin\Debug\CamCan.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="26/11/2014 12:39:30 PM">
+  <file source="F:\CamCanFinal\Backup\CamCan\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="26/11/2014 10:57:12 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\obj\Debug\CamCan.dll" archivePath="CamCan.dll" lastWriteTime="26/11/2014 11:16:50 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Videos\ROUGH_FOR_APP_TESTING_WEB-Cellular.m4v" archivePath="Videos\ROUGH_FOR_APP_TESTING_WEB-Cellular.m4v" lastWriteTime="19/11/2014 11:36:12 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="19/11/2014 11:28:04 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19/11/2014 11:27:46 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Background.png" archivePath="Background.png" lastWriteTime="19/11/2014 11:27:48 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\back.png" archivePath="Images\back.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\change_text.png" archivePath="Images\change_text.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\change_video.png" archivePath="Images\change_video.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\help.png" archivePath="Images\help.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\info.png" archivePath="Images\info.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\login.png" archivePath="Images\login.png" lastWriteTime="26/11/2014 10:57:00 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\next.png" archivePath="Images\next.png" lastWriteTime="26/11/2014 10:57:02 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Images\video-placeholder-large.jpg" archivePath="Images\video-placeholder-large.jpg" lastWriteTime="26/11/2014 10:57:02 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="26/11/2014 10:55:54 AM" />
+  <file source="F:\CamCanFinal\Backup\CamCan\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="26/11/2014 10:57:12 AM" />
 </xapCache>
